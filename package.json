@@ -1,17 +1,44 @@
 {
   "name": "facultas-partners",
   "version": "1.0.0",
-  "description": "",
+  "description": "Landing page for the company",
   "main": "index.js",
-  "scripts": {
-    "start": "parcel index.html"
-  },
-  "keywords": [],
-  "author": "",
+  "author": "Román Méndez Beck",
   "license": "ISC",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx .",
+    "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json|ts|tsx)\"",
+    "format": "npm run prettier -- --write",
+    "check-format": "npm run prettier -- --check",
+    "validate": "npm-run-all --parallel check-format lint build"
+  },
+  "lint-staged": {
+    "**/*.+(js|json|css|html|md)": [
+      "prettier"
+    ]
+  },
   "dependencies": {
-    "parcel": "^1.12.4",
+    "eslint-config-kentcdodds": "^14.13.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/preset-react": "^7.10.1",
+    "@babel/preset-typescript": "^7.7.2",
+    "@typescript-eslint/eslint-plugin": "^2.7.0",
+    "@typescript-eslint/parser": "^2.7.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.5.0",
+    "jest": "^26.0.1",
+    "lint-staged": "^10.2.7",
+    "npm-run-all": "^4.1.5",
+    "parcel": "^1.12.4",
+    "prettier": "^1.19.1"
   }
 }
