@@ -6,6 +6,7 @@ import NavBar from './components/NavBar'
 import NavLink from './components/NavLink'
 import {BrowserRouter as Router} from 'react-router-dom'
 import Header from './components/Header'
+import ContactBtn from './components/ContactBtn'
 
 function App() {
   return (
@@ -18,7 +19,9 @@ function App() {
           <NavLink to="*">News</NavLink>
           <NavLink to="*">Contact</NavLink>
         </NavBar>
-        <Header />
+        <Header>
+          <ContactBtn />
+        </Header>
       </Router>
     </ThemeProvider>
   )
