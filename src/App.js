@@ -7,6 +7,9 @@ import NavLink from './components/NavLink'
 import {BrowserRouter as Router} from 'react-router-dom'
 import Header from './components/Header'
 import ContactBtn from './components/ContactBtn'
+import AboutSection from './components/AboutSection'
+import Team from './components/TeamB'
+import Wave from './components/Wave'
 
 function App() {
   return (
@@ -22,6 +25,9 @@ function App() {
         <Header>
           <ContactBtn />
         </Header>
+        <AboutSection />
+        <Wave />
+        <Team />
       </Router>
     </ThemeProvider>
   )

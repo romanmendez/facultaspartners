@@ -2,6 +2,7 @@ export const theme = {
   darkBlue: '#005990',
   lightBlue: '#E8F1F5',
   navLinks: '#FAFAFA',
+  grey: '#717272',
 }
 
 const size = {

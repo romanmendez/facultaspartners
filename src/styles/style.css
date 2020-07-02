@@ -3,3 +3,6 @@
 body {
   font-family: 'Nunito';
 }
+p {
+  line-height: 1.2rem;
+}

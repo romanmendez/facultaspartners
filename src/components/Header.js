@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import text from '../../data/data.json'
+import {header} from '../../data/text.js'
 import headerImage from '../../assets/header-bg.jpg'
 
 const Container = styled.div`
@@ -39,8 +39,8 @@ function Header({children}) {
   return (
     <Container>
       <Text>
-        <h2>{text.header.description}</h2>
-        <h1>{text.header.slogan}</h1>
+        <h2>{header.description}</h2>
+        <h1>{header.slogan}</h1>
       </Text>
       {children}
     </Container>
