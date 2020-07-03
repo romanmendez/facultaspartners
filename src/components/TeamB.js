@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
 import {profiles} from '../../data/text'
+import {useLanguage} from '../context'
 
 const SectionContainer = styled.div`
   background: ${props => props.theme.lightBlue};
@@ -55,10 +56,11 @@ function ProfileCard({name, title, location, img}) {
 }
 
 function Team() {
+  const [language] = useLanguage()
   const mapProfiles = profiles.map((p, i) => (
     <ProfileCard
       name={p.name}
-      title={p.title}
+      title={p.title[language]}
       location={p.location}
       img={p.img}
       key={i + p.img}

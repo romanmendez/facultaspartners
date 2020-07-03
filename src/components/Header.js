@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import {useLanguage} from '../context'
 import {header} from '../../data/text.js'
 import headerImage from '../../assets/header-bg.jpg'
 
@@ -36,11 +37,13 @@ const Text = styled.div`
 `
 
 function Header({children}) {
+  const [language] = useLanguage()
+  console.log(language)
   return (
     <Container>
       <Text>
-        <h2>{header.description}</h2>
-        <h1>{header.slogan}</h1>
+        <h2>{header.description[language]}</h2>
+        <h1>{header.slogan[language]}</h1>
       </Text>
       {children}
     </Container>
