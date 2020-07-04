@@ -1,12 +1,58 @@
-const header = {
-  slogan: {
-    en: 'Gain Scale And Lower Risks',
-    es: '',
+const links = [
+  {
+    text: {
+      en: 'About Us',
+      es: 'Quiénes Somos',
+    },
+    link: 'about',
   },
-  description: {
+  {
+    text: {
+      en: 'What We Do',
+      es: 'Lo Que Hacemos',
+    },
+    link: 'wedo',
+  },
+  {
+    text: {
+      en: 'The Team',
+      es: 'El Equipo',
+    },
+    link: 'team',
+  },
+  {
+    text: {
+      en: 'Special Relationships',
+      es: 'Relaciones Especiales',
+    },
+    link: 'relationships',
+  },
+  {
+    text: {
+      en: 'Contact',
+      es: 'Contacto',
+    },
+    link: 'contact',
+  },
+]
+
+const header = {
+  header: {
+    en: 'Gain Scale And Lower Risks',
+    es: 'GANAR ESCALABILIDAD Y REDUCIR RIESGOS',
+  },
+  subheader: {
     en:
       'An EU - US advisory firm and provider of capital that bridges the Atlantic bringing together early stage life sciences companies to',
-    es: '',
+    es:
+      'Consultora Estadounidense y Europea,  que conecta empresas del sector Ciencias de la Vida a ambos lados del Atlántico, y pone a su disposición capital de inversión para',
+  },
+  button: {
+    text: {
+      en: 'Contact Us',
+      es: 'Contáctanos',
+    },
+    link: 'contact',
   },
 }
 
@@ -19,14 +65,16 @@ const about = {
   header: {
     en:
       'Facultas partners is a team based in the US and Europe, with extensive experience working in the life sciences sector on both sides of the Atlantic.',
-    es: '',
+    es:
+      'El equipo que configura Facultas Partner está localizado tanto en Estados Unidos como en Europa, y cuenta con una amplia experiencia en el sector de Ciencias de la Vida a ambos lados del Atlántico.',
   },
   cards: [
     {
       text: {
         en:
           'A track record of heading life sciences start-ups and growth companies.',
-        es: '',
+        es:
+          'Historial de éxito liderando start-ups y empresas en crecimiento, del sector de ciencias de la vida.',
       },
       icon: dna,
     },
@@ -34,7 +82,8 @@ const about = {
       text: {
         en:
           'Veteran founders and C-level executive (CEO, COO) with experience across all aspects of life sciences operations.',
-        es: '',
+        es:
+          'Fundadores y ejecutivos con amplia experiencia en distintos aspectos del sector.',
       },
       icon: cert,
     },
@@ -42,7 +91,8 @@ const about = {
       text: {
         en:
           'Deep established relationships with the life sciences ecosystems in the US and the EU',
-        es: '',
+        es:
+          'Con relaciones muy bien establecidas en el ecosistema de ciencias de la vida, tanto en Estados Unidos como en Europa',
       },
       icon: link,
     },
@@ -50,7 +100,8 @@ const about = {
       text: {
         en:
           'Experience with cross border M&A, JV, post-merger integration, negotiating deals terms over successive rounds of investment and exit.',
-        es: '',
+        es:
+          'Experiencia en fusiones y adquisiciones, joint ventures, integración de empresas, negociación y gestión de rondas de inversión y desinversión.',
       },
       icon: handshake,
     },
@@ -66,161 +117,181 @@ const sainzMartinez = require('../assets/profile_imgs/sainz-martinez.jpg')
 const castellanoJimenez = require('../assets/profile_imgs/castellano-jimenez.jpeg')
 const odriozola = require('../assets/profile_imgs/odriozola.jpg')
 const montoya = require('../assets/profile_imgs/montoya.png')
+const monis = require('../assets/profile_imgs/monis.jpg')
 
-const profiles = [
-  {
-    name: 'Miguel A. Mendez',
-    title: {
-      en: 'Managing Partner',
-      es: '',
-    },
-    bio: {
-      en:
-        'A multinational and entrepreneurial trajectory spanning the US and Europe. A successful career as a Managing Director investment banker advising European companies on cross border M&A, followed by a career as CEO/founder or advisor of technology growth companies in Europe and the US across multiple sectors, including life sciences.',
-      es: '',
-    },
-    location: 'us',
-    img: mendez,
+const team = {
+  header: {
+    en: 'The Team',
+    es: 'El Equipo',
   },
-  {
-    name: 'Robert Masterson',
-    title: {
-      en: 'Partner',
-      es: '',
+  members: [
+    {
+      name: 'Miguel A. Mendez',
+      title: {
+        en: 'Managing Partner',
+        es: '',
+      },
+      bio: {
+        en:
+          'A multinational and entrepreneurial trajectory spanning the US and Europe. A successful career as a Managing Director investment banker advising European companies on cross border M&A, followed by a career as CEO/founder or advisor of technology growth companies in Europe and the US across multiple sectors, including life sciences.',
+        es: '',
+      },
+      email: 'mamendez@facultaspartners.com',
+      location: 'us',
+      img: mendez,
     },
-    bio: {
-      en:
-        '25 years of executive experience in the Seattle area life sciences sector. Founder of multiple Medtech companies, Tessera Diagnostics, Prevencio, Opticyte. As Entrepreneur in Residence mentored and supported fellow entrepreneurs at UW and OHSU. BA in Science Microbiology and Ph.D in Molecular, Cellular and Development Biology.',
-      es: '',
+    {
+      name: 'Robert Masterson',
+      title: {
+        en: 'Partner',
+        es: '',
+      },
+      bio: {
+        en:
+          '25 years of executive experience in the Seattle area life sciences sector. Founder of multiple Medtech companies, Tessera Diagnostics, Prevencio, Opticyte. As Entrepreneur in Residence mentored and supported fellow entrepreneurs at UW and OHSU. BA in Science Microbiology and Ph.D in Molecular, Cellular and Development Biology.',
+        es: '',
+      },
+      email: 'rmasterson@facultaspartners.com',
+      location: 'us',
+      img: masterson,
     },
-    location: 'us',
-    img: masterson,
-  },
-  {
-    name: 'Chris Igielski',
-    title: {
-      en: 'Partner',
-      es: '',
+    {
+      name: 'Chris Igielski',
+      title: {
+        en: 'Partner',
+        es: '',
+      },
+      bio: {
+        en:
+          'Chris raised capital for the WFund an early stage venture fund with a life sciences focus. As its Chief Operating Officer, he negotiated more than 40 company investments. He served as interim CEO of TwinStrand Bio. He currently serves as board member or observer on four life sciences companies. Chris is a member of the US patent bar, but in addition holds a degree in chemical engineering.',
+        es: '',
+      },
+      email: 'cigielski@facultaspartners.com',
+      location: 'us',
+      img: igielski,
     },
-    bio: {
-      en:
-        'Chris raised capital for the WFund an early stage venture fund with a life sciences focus. As its Chief Operating Officer, he negotiated more than 40 company investments. He served as interim CEO of TwinStrand Bio. He currently serves as board member or observer on four life sciences companies. Chris is a member of the US patent bar, but in addition holds a degree in chemical engineering.',
-      es: '',
+    {
+      name: 'Brian Flucht',
+      title: {
+        en: 'Advisor',
+        es: '',
+      },
+      bio: {
+        en:
+          'He has operated and invested across the IT and Life sciences domains for over 22 years, direct equity purchases and structured debt financing. His experience as venture capitalist and corporate development professional spans seed stage to large multinationals. MBA with specialization in corporate finance and Material science and engineering degree.',
+        es: '',
+      },
+      email: 'bflucht@facultaspartners.com',
+      location: 'us',
+      img: flucht,
     },
-    location: 'us',
-    img: igielski,
-  },
-  {
-    name: 'Brian Flucht',
-    title: {
-      en: 'Advisor',
-      es: '',
+    {
+      name: 'Jack Coats',
+      title: {
+        en: 'Advisor',
+        es: '',
+      },
+      bio: {
+        en:
+          'A senior executive and entrepreneur. He has led and founded multiple companies – CardioWise, 3dMD, Vision RT in the medical imaging segment. Prior to that he led the life sciences businesses of FEI and Xradia leaders in nanotechnology imaging. As President of Nucletron Corp., formulated a groundbreaking strategy and guided the successful market introduction of Varian Medical Systems.',
+        es: '',
+      },
+      email: 'jcoats@facultaspartners.com',
+      location: 'us',
+      img: coats,
     },
-    bio: {
-      en:
-        'He has operated and invested across the IT and Life sciences domains for over 22 years, direct equity purchases and structured debt financing. His experience as venture capitalist and corporate development professional spans seed stage to large multinationals. MBA with specialization in corporate finance and Material science and engineering degree.',
-      es: '',
+    {
+      name: 'Ann Bunnenberg',
+      title: {
+        en: 'Advisor',
+        es: '',
+      },
+      bio: {
+        en:
+          'Twenty-five years founding, leading and exiting medical device companies. Co-founded and took public Geodesis Inc. (now Phillips Neuro) high resolution EEG systems. Currently CEO of two biomedical companies- Synergic Medical Technologies Inc and CytoImage. Board member of various private and not for profit companies – WellRythms, Invivo Biosciences, Oregon Inc. A lawyer by training with experience in transactional and commercial litigation.',
+        es: '',
+      },
+      email: 'abunnenberg@facultaspartners.com',
+      location: 'us',
+      img: bunnenberg,
     },
-    location: 'us',
-    img: flucht,
-  },
-  {
-    name: 'Jack Coats',
-    title: {
-      en: 'Advisor',
-      es: '',
+    {
+      name: 'Enrique Sainz Martinez',
+      title: {
+        en: 'Partner',
+        es: '',
+      },
+      bio: {
+        en:
+          'Entrepreneur and founder of multiple companies; Subvenciuris, grant consulting, Areka Telelcom electromagnetic installations, Valoralia I MAS D development of molecular building blocks for antibiotics from cyanobacteria. Founder and Chairman of Canaan Research the Spanish life sciences investment company, majority shareholder of Mirnax Biosens, Isquaemia Biotech, Forchronic and Derma Innovate. Lawyer by training and MBA.',
+        es: '',
+      },
+      email: 'esainz@facultaspartners.com',
+      location: 'eu',
+      img: sainzMartinez,
     },
-    bio: {
-      en:
-        'A senior executive and entrepreneur. He has led and founded multiple companies – CardioWise, 3dMD, Vision RT in the medical imaging segment. Prior to that he led the life sciences businesses of FEI and Xradia leaders in nanotechnology imaging. As President of Nucletron Corp., formulated a groundbreaking strategy and guided the successful market introduction of Varian Medical Systems.',
-      es: '',
+    {
+      name: 'Jose L. Castellano Jimenez',
+      title: {
+        en: 'Partner',
+        es: '',
+      },
+      bio: {
+        en:
+          'Corporate lawyer. Twenty years’ experience advising European companies of different size, from different sectors; technology, renewable energies, food, real estate and life sciences. Professional experience in the US and Spain. Master in international business and finance.',
+        es: '',
+      },
+      email: 'jlcastellano@facultaspartners.com',
+      location: 'eu',
+      img: castellanoJimenez,
     },
-    location: 'us',
-    img: coats,
-  },
-  {
-    name: 'Ann Bunnenberg',
-    title: {
-      en: 'Advisor',
-      es: '',
+    {
+      name: 'Juan Jose Montoya Minano',
+      title: {
+        en: 'Partner',
+        es: '',
+      },
+      bio: {
+        en:
+          'Extensive experience leading and managing R& D project. Chief Research Officer at Universidad Alfonso X el Sabio, (UAX) the leading engineering and medical private university in Spain. Professor of Medicine at Universidad Complutense. Founder and board member Canaan Research the Spanish life sciences investment company, the majority shareholder of Mirnax Biosens, Isquaemia Biotech, Forchronic and Derma Innovate. PhD in medicine, MBA.',
+        es: '',
+      },
+      email: 'jjmontoya@@facultaspartners.com',
+      location: 'eu',
+      img: montoya,
     },
-    bio: {
-      en:
-        'Twenty-five years founding, leading and exiting medical device companies. Co-founded and took public Geodesis Inc. (now Phillips Neuro) high resolution EEG systems. Currently CEO of two biomedical companies- Synergic Medical Technologies Inc and CytoImage. Board member of various private and not for profit companies – WellRythms, Invivo Biosciences, Oregon Inc. A lawyer by training with experience in transactional and commercial litigation.',
-      es: '',
+    {
+      name: 'Ignacio Odriozola',
+      title: {
+        en: 'Advisor',
+        es: '',
+      },
+      bio: {
+        en:
+          'Ignacio has more than 30 years in senior management positions in the healthcare sector, Palex Medical, CH Werfen Group. He has worked in Spain, the US and Italy. Since 2000 founding partner of LIM Global Consulting an executive search firm and consulting firm focused on life sciences across Europe.  A Spanish national fluent in English and based in Barcelona.',
+        es: '',
+      },
+      email: 'iodriozola@facultaspartners.com',
+      location: 'eu',
+      img: odriozola,
     },
-    location: 'us',
-    img: bunnenberg,
-  },
-  {
-    name: 'Enrique Sainz Martinez',
-    title: {
-      en: 'Partner',
-      es: '',
+    {
+      name: 'Antonio Monis',
+      title: {
+        en: 'Advisor',
+        es: '',
+      },
+      bio: {
+        en:
+          'Antonio has over 30 years’ experience in the finance and insurance sectors, as well as in life sciences at most senior level. CFO of ING Insurance Company, independent director of Reale Seguros de Vida (Reale Group). Chairman of the board of Mirnax Biosens a diagnostic company. MBA and Advanced Management Program at INSEAD.',
+        es: '',
+      },
+      email: 'amonis@facultaspartners.com',
+      location: 'eu',
+      img: monis,
     },
-    bio: {
-      en:
-        'Entrepreneur and founder of multiple companies; Subvenciuris, grant consulting, Areka Telelcom electromagnetic installations, Valoralia I MAS D development of molecular building blocks for antibiotics from cyanobacteria. Founder and Chairman of Canaan Research the Spanish life sciences investment company, majority shareholder of Mirnax Biosens, Isquaemia Biotech, Forchronic and Derma Innovate. Lawyer by training and MBA.',
-      es: '',
-    },
-    location: 'eu',
-    img: sainzMartinez,
-  },
-  {
-    name: 'Jose L. Castellano Jimenez',
-    title: {
-      en: 'Partner',
-      es: '',
-    },
-    bio: {
-      en:
-        'Corporate lawyer. Twenty years’ experience advising European companies of different size, from different sectors; technology, renewable energies, food, real estate and life sciences. Professional experience in the US and Spain. Master in international business and finance.',
-      es: '',
-    },
-    location: 'eu',
-    img: castellanoJimenez,
-  },
-  {
-    name: 'Juan Jose Montoya Minano',
-    title: {
-      en: 'Partner',
-      es: '',
-    },
-    bio: {
-      en:
-        'Extensive experience leading and managing R& D project. Chief Research Officer at Universidad Alfonso X el Sabio, (UAX) the leading engineering and medical private university in Spain. Professor of Medicine at Universidad Complutense. Founder and board member Canaan Research the Spanish life sciences investment company, the majority shareholder of Mirnax Biosens, Isquaemia Biotech, Forchronic and Derma Innovate. PhD in medicine, MBA.',
-      es: '',
-    },
-    location: 'eu',
-    img: montoya,
-  },
-  {
-    name: 'Ignacio Odriozola',
-    title: {
-      en: 'Advisor',
-      es: '',
-    },
-    bio: {
-      en:
-        'Ignacio has more than 30 years in senior management positions in the healthcare sector, Palex Medical, CH Werfen Group. He has worked in Spain, the US and Italy. Since 2000 founding partner of LIM Global Consulting an executive search firm and consulting firm focused on life sciences across Europe.  A Spanish national fluent in English and based in Barcelona.',
-      es: '',
-    },
-    location: 'eu',
-    img: odriozola,
-  },
-  {
-    name: 'Antonio Monis',
-    title: {
-      en: 'Advisor',
-      es: '',
-    },
-    bio: {
-      en: '',
-      es: '',
-    },
-    location: 'eu',
-  },
-]
+  ],
+}
 
 const globe = require('../assets/world.jpg')
 const briefcase = require('../assets/briefcase.jpg')
@@ -228,18 +299,31 @@ const arm = require('../assets/arm.jpg')
 const money = require('../assets/money.jpg')
 const hands = require('../assets/hands.jpg')
 const heart = require('../assets/heart.jpg')
+const advisoryImage = require('../assets/strategigadvisory-bg.jpg')
 
 const advisory = {
   header: {
+    en: 'Strategic Advisory',
+    es: 'Asesoramiento en estrategia.',
+  },
+  description: {
+    en:
+      'Based upon our deep knowledge of the life sciences landscape on both sides of the Atlantic we identify companies that exhibit compelling complementarities, and work to bring them together to achieve (1+1=3). We subsequently invest in them via two separate investments funds based in the EU and the US.',
+    es:
+      'Basándonos en nuestro profundo conocimiento del entorno de las ciencias de la vida a ambos lados del Atlántico, identificamos empresas que tengan potencial de complementarse y trabajamos en la unión de ambas para incrementar su valor (1+1=3). Posteriormente invertimos para potenciar sus resultados, a través de dos fondos de inversión independientes con sede en la UE y los Estados Unidos.',
+  },
+  img: advisoryImage,
+  subheader: {
     en:
       'We build innovative companies from all sectors of life sciences, including drug development, medical devices, digital health technology & services, nutraceuticals and diagnostics with the following attributes.',
-    es: '',
+    es:
+      'Nuestro objetivo es construir empresas del sector ciencias de la vida en todos los segmentos (desarrollo de fármacos, med-tech, salud digital y nutracéuticos) con los siguientes parámetros.',
   },
   cards: [
     {
       text: {
         en: 'A presence in two large markets; the US and Europe.',
-        es: '',
+        es: 'Presencia en dos grandes mercados: Estados Unidos y Europa.',
       },
       icon: globe,
       color: 'white',
@@ -247,7 +331,8 @@ const advisory = {
     {
       text: {
         en: 'A broader and strategically complimentary product portfolio.',
-        es: '',
+        es:
+          'Portfolio de productos más amplios y mejor posicionado estratégicamente.',
       },
       icon: briefcase,
       color: 'black',
@@ -256,7 +341,8 @@ const advisory = {
       text: {
         en:
           'Complementary strengths in core operational area – technology, manufacturing, R&D and product development.',
-        es: '',
+        es:
+          'Fortalezas complementarias en las principales áreas operativas: tecnología, fabricación, I+D y desarrollo de productos.',
       },
       icon: arm,
       color: 'white',
@@ -265,7 +351,8 @@ const advisory = {
       text: {
         en:
           'An enhanced ability to raise funding both dilutive and non-dilutive from a wider number of sources.',
-        es: '',
+        es:
+          'Mayor capacidad y diversidad de fuentes de financiación, tanto dilutiva como no dilutiva.',
       },
       icon: money,
       color: 'black',
@@ -274,7 +361,8 @@ const advisory = {
       text: {
         en:
           'A greater and more diverse set of relationships on both sides of the Atlantic.',
-        es: '',
+        es:
+          'Amplio y diverso esquema de relaciones a ambos lados del Atlántico.',
       },
       icon: hands,
       color: 'white',
@@ -283,7 +371,8 @@ const advisory = {
       text: {
         en:
           'A new found ability to pursue two separate regulatory paths and choose the fastest and most promising one.',
-        es: '',
+        es:
+          'Capacidad para seguir dos vías regulatorias distintas, con objeto de elegir la más rápida y prometedora.',
       },
       icon: heart,
       color: 'black',
@@ -291,4 +380,108 @@ const advisory = {
   ],
 }
 
-module.exports = {header, about, profiles, advisory}
+const capitalImage = require('../assets/providerofcapital-bg.jpg')
+const plant = require('../assets/hand-plant.jpg')
+const triangles = require('../assets/polygons.jpg')
+
+const capital = {
+  header: {
+    en: 'Provider of Capital',
+    es: 'PROVEEDOR DE CAPITAL',
+  },
+  description: {
+    en:
+      'Drawing on two separate investment funds based in the EU and the US, we aim to  invest in the newly “merged” life sciences companies we have contributed to bring together.',
+    es:
+      'Basándonos en dos fondos de inversión separados con sede en la UE y Estados Unidos, invertimos en las nuevas empresas de ciencias de la vida "fusionadas" gracias a nuestra intervención profesional.',
+  },
+  img: capitalImage,
+  subheader: {
+    en: 'We are an active partner and investor',
+    es: 'Nos configuramos como un inversor y socio activo.',
+  },
+  cards: [
+    {
+      text: {
+        en:
+          'We take a hands-on approach to facilitate the post-merger integration process.',
+        es:
+          'Adoptamos un enfoque práctico para facilitar el proceso de integración posterior a la fusión',
+      },
+      icon: plant,
+      color: 'black',
+    },
+    {
+      text: {
+        en:
+          'We work tirelessly with the merged entity to ascertain all the strategic synergies are realized.',
+        es:
+          'Trabajamos incansablemente con la entidad fusionada para asegurar la efectividad de todas las sinergias estratégicas.',
+      },
+      icon: triangles,
+      color: 'white',
+    },
+  ],
+}
+
+const canaan = require('../assets/canaan_rd.png')
+
+const relationships = {
+  header: {
+    en: 'Special Relationships',
+    es: 'RELACIONES ESPECIALES',
+  },
+  subheader: {
+    en:
+      'Facultas Partners in-depth knowledge of life sciences ecosystems in both the US and the EU comes about thanks to the special relationship we build in those ecosystems.',
+    es:
+      'El profundo conocimiento de Facultas Partners en el ecosistema de Ciencias de la Vida, a ambos lados del Atlántico, resulta de las especiales relaciones que construimos en este ecosistema, tanto en Europa como en Estados Unidos.',
+  },
+  list: [
+    {
+      header: {
+        en: 'Canaan Research & Investment',
+        es: 'Canaan Research & Investment',
+      },
+      text: {
+        en:
+          'A leading Spanish life sciences early stage investment group. It enjoys very close working relationships with Spain leading life sciences research institutions and works to translate ground breaking and proprietary technologies into successful spin-offs.',
+        es:
+          'Grupo de inversión español en empresas en fase de early stage, del sector Ciencias de la Vida. Goza de relaciones muy estrechas con las principales instituciones de investigación de ciencias de la vida, y trabaja para convertir tecnologías innovadoras en spin-offs de éxito.',
+      },
+      img: canaan,
+    },
+  ],
+}
+
+const contact = {
+  header: {
+    en: 'Contact',
+    es: 'Contacta',
+  },
+  form: {
+    from: {
+      en: 'email address',
+      es: 'dirección de correo electrónico',
+    },
+    subject: {
+      en: 'subject',
+      es: 'asunto',
+    },
+    message: {
+      en: 'your message',
+      es: 'su mensaje',
+    },
+  },
+}
+
+module.exports = {
+  links,
+  header,
+  about,
+  team,
+  advisory,
+  capital,
+  relationships,
+  contact,
+}

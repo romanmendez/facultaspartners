@@ -1,4 +1,4 @@
-import React, {useContext, useState, useMemo} from 'react'
+import React, {useContext, useState, useMemo, useEffect} from 'react'
 
 const LanguageContext = React.createContext('en')
 
@@ -12,6 +12,13 @@ function useLanguage() {
 
 function LanguageProvider(props) {
   const [language, setLanguage] = useState('en')
+  const storedSetting = JSON.parse(localStorage.getItem('language'))
+
+  useEffect(() => {
+    if (storedSetting) setLanguage(storedSetting)
+    else setLanguage(navigator.language.substring(0, 2) || 'en')
+  }, [language])
+
   const value = useMemo(() => [language, setLanguage], [language])
   return <LanguageContext.Provider value={value} {...props} />
 }

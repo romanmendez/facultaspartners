@@ -2,42 +2,67 @@ import React from 'react'
 import {ThemeProvider} from 'styled-components'
 import menuLogo from '../assets/logo-menu.png'
 import {theme} from './styles/theme'
-import {about, advisory} from '../data/text'
+import {
+  links,
+  header,
+  about,
+  team,
+  advisory,
+  capital,
+  relationships,
+  contact,
+} from '../data/text'
 import NavBar from './components/NavBar'
-import NavLink from './components/NavLink'
-import {BrowserRouter as Router} from 'react-router-dom'
 import Header from './components/Header'
-import ContactBtn from './components/ContactBtn'
-import CardSection from './components/CardSection'
+import {Element} from 'react-scroll'
+import TileSection from './components/TileSection'
+import IconSection from './components/IconSection'
 import Team from './components/TeamB'
-import Wave from './components/Wave'
-import {LanguageProvider, useLanguage} from './context'
+import {LanguageProvider} from './context'
+import BannerSection from './components/BannerSection'
+import ListSection from './components/ListSection'
+import LanguageBtn from './components/LanguageBtn'
+import HeaderBtn from './components/HeaderBtn'
+import ContactForm from './components/ContactForm'
 
 function App() {
-  const [language] = useLanguage()
   return (
     <LanguageProvider>
       <ThemeProvider theme={theme}>
-        <Router>
-          <NavBar logo={menuLogo}>
-            <NavLink to="*">About Us</NavLink>
-            <NavLink to="*">What We Do</NavLink>
-            <NavLink to="*">Special Relationships</NavLink>
-            <NavLink to="*">News</NavLink>
-            <NavLink to="*">Contact</NavLink>
-          </NavBar>
-          <Header>
-            <ContactBtn />
-          </Header>
-          <CardSection header={about.header} type="icon" data={about.cards} />
-          <Wave />
-          <Team />
-          <CardSection
-            header={advisory.header}
-            type="tile"
-            data={advisory.cards}
-          />
-        </Router>
+        <NavBar logo={menuLogo} links={links} />
+        <Header header={header.header} subheader={header.subheader}>
+          <HeaderBtn text={header.button.text} link={header.button.link} />
+        </Header>
+        <Element name="about" />
+        <IconSection header={about.header} data={about.cards} />
+        <Element name="wedo" />
+        <BannerSection
+          side="left"
+          header={advisory.header}
+          text={advisory.description}
+          img={advisory.img}
+        />
+        <TileSection header={advisory.subheader} data={advisory.cards} />
+        <BannerSection
+          side="right"
+          header={capital.header}
+          text={capital.description}
+          img={capital.img}
+        />
+        <TileSection header={capital.subheader} data={capital.cards} />
+        <Element name="team" />
+        <Team header={team.header} members={team.members} />
+        <Element name="relationships" />
+        <ListSection
+          header={relationships.header}
+          subheader={relationships.subheader}
+          list={relationships.list}
+        />
+        <ContactForm
+          header={contact.header}
+          inputFields={contact.form}
+          emails={team.members}
+        />
       </ThemeProvider>
     </LanguageProvider>
   )

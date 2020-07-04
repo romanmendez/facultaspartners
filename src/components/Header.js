@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import {useLanguage} from '../context'
-import {header} from '../../data/text.js'
 import headerImage from '../../assets/header-bg.jpg'
 
 const Container = styled.div`
@@ -25,6 +24,7 @@ const Text = styled.div`
     color: white;
   }
   h1 {
+    line-height: 2rem;
     font-weight: 300;
     font-size: 35px;
     text-transform: uppercase;
@@ -36,14 +36,14 @@ const Text = styled.div`
   }
 `
 
-function Header({children}) {
+function Header({header, subheader, children}) {
   const [language] = useLanguage()
-  console.log(language)
+
   return (
     <Container>
       <Text>
-        <h2>{header.description[language]}</h2>
-        <h1>{header.slogan[language]}</h1>
+        <h2>{subheader[language]}</h2>
+        <h1>{header[language]}</h1>
       </Text>
       {children}
     </Container>
