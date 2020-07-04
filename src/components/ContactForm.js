@@ -6,6 +6,7 @@ import Select from '@material-ui/core/Select'
 import FormLabel from '@material-ui/core/FormLabel'
 import MenuItem from '@material-ui/core/MenuItem'
 import {useLanguage} from '../context'
+import HeaderBtn from './HeaderBtn'
 
 const SectionContainer = styled.div`
   background: ${props => props.theme.lightBlue};
@@ -79,6 +80,9 @@ const ContactForm = ({header, inputFields, emails}) => {
         defaultValue=""
         className="input-field"
       />
+      <a href={`mailto:${form.to}&subject=${form.subject}&body=${form.body}`}>
+        Send
+      </a>
     </SectionContainer>
   )
 }
