@@ -9,6 +9,7 @@
     "start": "parcel index.html",
     "test": "jest --watch",
     "build": "parcel build index.html",
+    "deploy": "scp -i ~/.ssh/digital_ocean -r ./dist/* romanmendez@46.101.171.98:/var/www/facultaspartners.com/html",
     "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx .",
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json|ts|tsx)\"",
     "format": "npm run prettier -- --write",

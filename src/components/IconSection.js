@@ -8,7 +8,7 @@ const SectionContainer = styled.div`
 
 const Description = styled.p`
   font-size: 16px;
-  font-weight: 200;
+  font-weight: 400;
   width: 600px;
   text-align: center;
   margin: 0 auto;
