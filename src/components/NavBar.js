@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {Link, Element} from 'react-scroll'
+import {Link} from 'react-scroll'
 import {device} from '../styles/theme'
 import {useLanguage} from '../context'
 import LanguageBtn from './LanguageBtn'
@@ -21,24 +21,23 @@ const Logo = styled.div`
     height: 40px;
     margin-right: 10px;
   }
-  @media ${device.laptop} {
-    width: 50%;
-  }
-  @media ${device.tablet} {
-    width: 30%;
-  }
 `
 const Links = styled.div`
   display: flex;
   justify-content: space-around;
+  margin: 0 20px;
+  cursor: pointer;
   a {
     text-align: center;
   }
-  @media ${device.laptop} {
+  @media (min-width: 1300px) {
     width: 50%;
   }
-  @media ${device.tablet} {
+  @media (max-width: 1300px) {
     width: 70%;
+  }
+  @media (max-width: 900px) {
+    display: none;
   }
 `
 const Text = styled.span`

@@ -2,11 +2,13 @@ import React, {useState} from 'react'
 import styled from 'styled-components'
 import Popover from '@material-ui/core/Popover'
 import {useLanguage} from '../context'
+import SectionTitle from '../styles/components/SectionTitle'
+import {theme} from '../styles/theme'
 
 const SectionContainer = styled.div`
   background: ${props => props.theme.lightBlue};
   background-size: 100%;
-  padding: 40px 100px;
+  padding: 40px 50px;
 `
 const ProfilesContainer = styled.div`
   margin-top: 20px;
@@ -14,32 +16,25 @@ const ProfilesContainer = styled.div`
   justify-content: center;
   flex-flow: row wrap;
 `
-const Header = styled.div`
-  font-size: 20px;
-  padding: 10px 0;
-  text-align: center;
-  color: ${props => props.theme.darkBlue};
-  text-transform: uppercase;
-`
 const Card = styled.div`
-  width: 130px;
-  max-height: 140px;
-  margin: 20px 5px;
+  width: 200px;
+  margin: 20px 10px;
   text-align: center;
   line-height: 1rem;
   img {
     object-fit: cover;
-    height: 100px;
+    height: 150px;
     width: 100%;
     border-radius: 5px;
   }
   h4 {
-    font-size: 14px;
+    margin-top: 10px;
+    font-size: 16px;
     color: ${props => props.theme.darkBlue};
   }
   p {
-    font-size: 12px;
-    font-weight: 200;
+    font-size: 14px;
+    font-weight: 300;
     color: ${props => props.theme.grey};
   }
 `
@@ -116,7 +111,7 @@ function Team({header, members}) {
 
   return (
     <SectionContainer>
-      <Header>{header[language]}</Header>
+      <SectionTitle color={theme.darkBlue}>{header[language]}</SectionTitle>
       <ProfilesContainer>{mapMembers}</ProfilesContainer>
     </SectionContainer>
   )

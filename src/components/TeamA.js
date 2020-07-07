@@ -1,30 +1,25 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
-import {profiles} from '../../data/text'
+import SectionTitle from '../styles/components/SectionTitle'
+import {useLanguage} from '../context'
+import {theme} from '../styles/theme'
 
 const SectionContainer = styled.div`
-  background: ${props =>
-    props.header === 'Partners' ? props.theme.lightBlue : 'none'};
+  background: ${props => props.theme.lightBlue};
   background-size: 100%;
-  padding: 40px 100px;
+  padding: 40px 50px;
 `
 const ProfilesContainer = styled.div`
   margin: 0 auto;
-  width: 600px;
   display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
 `
 const ButtonsContainer = styled.div`
   width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: center;
-`
-const Header = styled.div`
-  font-size: 20px;
-  padding: 10px 0;
-  text-align: center;
-  color: ${props => props.theme.darkBlue};
-  text-transform: uppercase;
 `
 const Button = styled.div`
   width: 85px;
@@ -41,24 +36,24 @@ const Button = styled.div`
   user-select: none;
 `
 const Card = styled.div`
-  width: 130px;
-  max-height: 140px;
-  margin: 20px 5px;
+  width: 200px;
+  margin: 20px 10px;
   text-align: center;
   line-height: 1rem;
   img {
     object-fit: cover;
-    height: 100px;
-    width: 130px;
+    height: 150px;
+    width: 100%;
     border-radius: 5px;
   }
   h4 {
-    font-size: 14px;
+    margin-top: 10px;
+    font-size: 20px;
     color: ${props => props.theme.darkBlue};
   }
   p {
-    font-size: 12px;
-    font-weight: 200;
+    font-size: 16px;
+    font-weight: 300;
     color: ${props => props.theme.grey};
   }
 `
@@ -72,29 +67,42 @@ function ProfileCard({name, title, img}) {
   )
 }
 
-function Team({header}) {
+function Team({header, members}) {
+  const [language] = useLanguage()
   const [location, setLocation] = useState('us')
 
   const handleSelection = e => {
     setLocation(e)
   }
-  const mapProfiles = profiles.map(p => {
+  const mapProfiles = members.map(p => {
     const isLocation = p.location === location
-    const isTitle = p.title.includes(header.substring(0, p.title.length - 1))
+    const isTitle = p.title[language].includes(
+      header[language].substring(0, p.title.length - 1),
+    )
 
     if (isLocation && isTitle)
       return (
-        <ProfileCard name={p.name} title={p.title} img={p.img} key={p.img} />
+        <ProfileCard
+          name={p.name}
+          title={p.title[language]}
+          img={p.img}
+          key={p.img}
+        />
       )
     if (isLocation && isTitle)
       return (
-        <ProfileCard name={p.name} title={p.title} img={p.img} key={p.img} />
+        <ProfileCard
+          name={p.name}
+          title={p.title[language]}
+          img={p.img}
+          key={p.img}
+        />
       )
   })
 
   return (
-    <SectionContainer {...{header}}>
-      <Header>{header}</Header>
+    <SectionContainer>
+      <SectionTitle color={theme.darkBlue}>{header[language]}</SectionTitle>
       <ButtonsContainer>
         <Button
           selected={location === 'us'}

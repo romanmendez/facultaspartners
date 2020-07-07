@@ -1,38 +1,46 @@
 import React from 'react'
 import styled from 'styled-components'
 import {useLanguage} from '../context'
+import SectionHeader from '../styles/components/SectionHeader'
 import headerImage from '../../assets/header-bg.jpg'
 
-const Container = styled.div`
+const SectionContainer = styled.div`
   position: relative;
   background-image: url(${headerImage});
   background-size: cover;
   background-repeat: no-repeat;
   height: 600px;
 `
-const Text = styled.div`
+const TextContainer = styled.div`
   position: relative;
-  top: 200px;
-  width: 600px;
-  margin: 0 auto;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  padding: 0 50px;
+  height: 100%;
   * + * {
-    margin: 1.5rem;
+    margin-top: 1.5rem;
   }
-  h1,
-  h2 {
-    text-align: center;
-    color: white;
-  }
-  h1 {
-    line-height: 2rem;
-    font-weight: 300;
-    font-size: 35px;
-    text-transform: uppercase;
-  }
-  h2 {
-    font-weight: 300;
-    font-size: 17px;
-    line-height: 1.5rem;
+  .text {
+    position: relative;
+    width: 100%;
+
+    h1,
+    h2 {
+      text-align: center;
+      color: white;
+    }
+    h1 {
+      line-height: 3rem;
+      font-weight: 300;
+      font-size: 35px;
+      text-transform: uppercase;
+    }
+    h2 {
+      font-weight: 300;
+      font-size: 17px;
+      line-height: 1.5rem;
+    }
   }
 `
 
@@ -40,13 +48,15 @@ function Header({header, subheader, children}) {
   const [language] = useLanguage()
 
   return (
-    <Container>
-      <Text>
-        <h2>{subheader[language]}</h2>
-        <h1>{header[language]}</h1>
-      </Text>
-      {children}
-    </Container>
+    <SectionContainer>
+      <TextContainer>
+        <div className="text">
+          <SectionHeader color="white">{subheader[language]}</SectionHeader>
+          <h1>{header[language]}</h1>
+        </div>
+        <div>{children}</div>
+      </TextContainer>
+    </SectionContainer>
   )
 }
 

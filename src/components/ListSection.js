@@ -1,27 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 import {useLanguage} from '../context'
+import SectionHeader from '../styles/components/SectionHeader'
+import SectionTitle from '../styles/components/SectionTitle'
 
 const SectionContainer = styled.div`
   background: ${props => props.theme.darkBlue};
   background-size: 100%;
-  padding: 40px 100px;
+  padding: 40px 50px;
   color: white;
-`
-const Header = styled.h2`
-  font-size: 20px;
-  font-weight: 300;
-  padding: 10px 0;
-  margin-bottom: 20px;
-  text-align: center;
-  text-transform: uppercase;
-`
-const Subheader = styled.p`
-  font-size: 12px;
-  font-weight: 300;
-  width: 500px;
-  text-align: center;
-  margin: 0 auto;
 `
 const Divider = styled.div`
   height: 4px;
@@ -35,12 +22,15 @@ const List = styled.div`
 `
 const ListItem = styled.div`
   display: flex;
-  align-items: center;
+  align-items: top;
   .image {
     background: white;
-    height: 100px;
+    max-height: 100px;
     display: flex;
+    justify-content: center;
     align-items: center;
+    border-radius: 5px;
+    margin-bottom: 20px;
     img {
       object-fit: cover;
     }
@@ -48,12 +38,24 @@ const ListItem = styled.div`
   .text {
     margin-left: 20px;
     h3 {
-      font-size: 16px;
+      font-size: 20px;
       line-height: 2rem;
     }
     p {
-      font-size: 12px;
-      font-weight: 200;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.5rem;
+    }
+  }
+  @media (max-width: 768px) {
+    flex-flow: column;
+    .text {
+      margin-left: 0;
+    }
+    .image {
+      img {
+        max-width: 80%;
+      }
     }
   }
 `
@@ -63,7 +65,7 @@ function ListSection({header, subheader, list}) {
   const mapList = list.map((item, i) => (
     <ListItem key={i + header}>
       <div className="image">
-        <img src={item.img} />
+        <img src={item.img.src} style={item.img.margin} />
       </div>
       <div className="text">
         <h3>{item.header[language]}</h3>
@@ -73,8 +75,8 @@ function ListSection({header, subheader, list}) {
   ))
   return (
     <SectionContainer>
-      <Header>{header[language]}</Header>
-      <Subheader>{subheader[language]}</Subheader>
+      <SectionTitle>{header[language]}</SectionTitle>
+      <SectionHeader>{subheader[language]}</SectionHeader>
       <Divider />
       <List>{mapList}</List>
     </SectionContainer>

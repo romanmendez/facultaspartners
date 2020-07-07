@@ -1,25 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
+import SectionHeader from '../styles/components/SectionHeader'
+import Divider from '../styles/components/Divider'
+import Text from '../styles/components/Text'
 import {useLanguage} from '../context.js'
 import {device} from '../styles/theme'
 
 const SectionContainer = styled.div`
-  margin: 50px 100px;
-`
-
-const Description = styled.p`
-  font-size: 16px;
-  font-weight: 200;
-  width: 600px;
-  text-align: center;
-  margin: 0 auto;
-`
-const Divider = styled.div`
-  height: 4px;
-  width: 85px;
-  margin: 20px auto;
-  background: ${props => props.theme.darkBlue};
-  border-radius: 20px;
+  padding: 50px;
 `
 
 const TileContainer = styled.div`
@@ -31,28 +19,58 @@ const TileContainer = styled.div`
     min-width: 350px;
     position: relative;
     text-align: center;
-    width: 33%;
     background: ${props => (props.index % 2 ? props.theme.darkBlue : 'white')};
     img {
       width: 100%;
+      border-radius: 5px;
     }
   }
-  @media ${device.tablet} {
+  @media (min-width: 900px) {
     .container {
-      width: 50%;
+      width: 33%;
+    }
+  }
+  @media ${device.medium} {
+    .container {
+      width: 100%;
+      img {
+        height: 100px;
+      }
+    }
+  }
+  @media (min-width: 900px) and (max-width: 1150px) {
+    #card1 {
+      order: 1;
+    }
+    #card2 {
+      order: 2;
+    }
+    #card3 {
+      order: 4;
+    }
+    #card4 {
+      order: 3;
+    }
+    #card5 {
+      order: 5;
+    }
+    #card6 {
+      order: 6;
     }
   }
 `
-const Text = styled.div`
+const TextContainer = styled.div`
   line-height: 1rem;
   display: flex;
   align-items: center;
-  color: ${props => props.color};
+  justify-content: center;
   position: absolute;
   top: 0;
   font-size: 15px;
-  font-weight: 200;
+  font-weight: 300;
+  line-height: 1.5rem;
   height: 100%;
+  width: 100%;
   p {
     padding: 0 20px;
   }
@@ -63,17 +81,17 @@ function TileSection({header, data}) {
 
   const mapCards = data.map((card, i) => {
     return (
-      <div key={i} className="container">
+      <div key={i} className="container" id={'card' + (i + 1)}>
         <img src={card.icon} />
-        <Text color={card.color}>
-          <p>{card.text[language]}</p>
-        </Text>
+        <TextContainer>
+          <Text color={card.color}>{card.text[language]}</Text>
+        </TextContainer>
       </div>
     )
   })
   return (
     <SectionContainer>
-      <Description>{header[language]}</Description>
+      <SectionHeader>{header[language]}</SectionHeader>
       <Divider />
       <TileContainer>{mapCards}</TileContainer>
     </SectionContainer>

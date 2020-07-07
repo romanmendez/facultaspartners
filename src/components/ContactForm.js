@@ -3,10 +3,10 @@ import styled from 'styled-components'
 import {useForm, Controller} from 'react-hook-form'
 import TextField from '@material-ui/core/TextField'
 import Select from '@material-ui/core/Select'
-import FormLabel from '@material-ui/core/FormLabel'
 import MenuItem from '@material-ui/core/MenuItem'
 import {useLanguage} from '../context'
-import HeaderBtn from './HeaderBtn'
+import SectionTitle from '../styles/components/SectionTitle'
+import {theme} from '../styles/theme'
 
 const SectionContainer = styled.div`
   background: ${props => props.theme.lightBlue};
@@ -42,7 +42,7 @@ const ContactForm = ({header, inputFields, emails}) => {
 
   return (
     <SectionContainer>
-      <Header>{header[language]}</Header>
+      <SectionTitle color={theme.darkBlue}>{header[language]}</SectionTitle>
       <Controller
         as={<Select>{mapContactEmails}</Select>}
         name="to"
@@ -57,15 +57,6 @@ const ContactForm = ({header, inputFields, emails}) => {
         control={control}
         variant="filled"
         label={inputFields.from[language]}
-        defaultValue=""
-        className="input-field"
-      />
-      <Controller
-        as={TextField}
-        name="subject"
-        control={control}
-        variant="filled"
-        label={inputFields.subject[language]}
         defaultValue=""
         className="input-field"
       />

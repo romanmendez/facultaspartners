@@ -1,40 +1,29 @@
 import React from 'react'
 import styled from 'styled-components'
 import {useLanguage} from '../context.js'
+import {device} from '../styles/theme'
+import SectionHeader from '../styles/components/SectionHeader'
+import Divider from '../styles/components/Divider'
+import Text from '../styles/components/Text'
 
 const SectionContainer = styled.div`
-  margin: 50px 100px;
-`
-
-const Description = styled.p`
-  font-size: 16px;
-  font-weight: 400;
-  width: 600px;
-  text-align: center;
-  margin: 0 auto;
-`
-const Divider = styled.div`
-  height: 4px;
-  width: 85px;
-  margin: 20px auto;
-  background: ${props => props.theme.darkBlue};
-  border-radius: 20px;
+  margin: 50px 50px;
 `
 const IconContainer = styled.div`
   display: flex;
+  justify-content: center;
   div {
-    width: 25%;
+    min-width: 200px;
+    max-width: 300px;
     margin: 0 20px;
   }
   img {
     margin: 20px auto;
     display: flex;
   }
-`
-const Text = styled.p`
-  top: 0;
-  font-size: 15px;
-  font-weight: 200;
+  @media (max-width: 1024px) {
+    flex-flow: row wrap;
+  }
 `
 
 function IconSection({header, data}) {
@@ -49,7 +38,7 @@ function IconSection({header, data}) {
   })
   return (
     <SectionContainer>
-      <Description>{header[language]}</Description>
+      <SectionHeader>{header[language]}</SectionHeader>
       <Divider />
       <IconContainer>{mapCards}</IconContainer>
     </SectionContainer>

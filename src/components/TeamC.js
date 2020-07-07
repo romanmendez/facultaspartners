@@ -1,5 +1,7 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
+import SectionTitle from '../styles/components/SectionTitle'
+import {theme} from '../styles/theme'
 import {useLanguage} from '../context'
 
 const SectionContainer = styled.div`
@@ -13,16 +15,9 @@ const ProfilesContainer = styled.div`
   justify-content: center;
   flex-flow: row wrap;
 `
-const Header = styled.div`
-  font-size: 20px;
-  padding: 10px 0;
-  text-align: center;
-  color: ${props => props.theme.darkBlue};
-  text-transform: uppercase;
-`
 const Card = styled.div`
   width: 200px;
-  margin: 20px 10px;
+  margin: 20px 30px;
   text-align: center;
   line-height: 1rem;
   img {
@@ -48,7 +43,7 @@ const Bio = styled.div`
   padding: 10px 0;
   color: black;
   font-size: 13px;
-  font-weight: 200;
+  font-weight: 300;
   width: 200px;
   line-height: 1.5rem;
 `
@@ -95,7 +90,7 @@ function Team({header, members}) {
 
   return (
     <SectionContainer>
-      <Header>{header[language]}</Header>
+      <SectionTitle color={theme.darkBlue}>{header[language]}</SectionTitle>
       <ProfilesContainer>{mapMembers}</ProfilesContainer>
     </SectionContainer>
   )
