@@ -81,7 +81,7 @@ const about = {
     {
       text: {
         en:
-          'Veteran founders and C-level executive (CEO, COO) with experience across all aspects of life sciences operations.',
+          'Veteran founders and C-level executives (CEO, COO) with experience across all aspects of life sciences operations.',
         es:
           'Fundadores y ejecutivos con amplia experiencia en distintos aspectos del sector.',
       },
@@ -138,7 +138,7 @@ const team = {
           'Su trayectoria multinacional y empresarial abarca Estados Unidos y Europa. Ha desarrollado una exitosa carrera como director general de banca de negocios, asesorando a empresas europeas en fusiones y adquisiciones internacionales. Ha sido CEO/fundador y asesor de empresas de crecimiento tecnológico en Europa y Estados Unidos en múltiples sectores, incluidas las ciencias de la vida.',
       },
       email: 'mmendez@facultaspartners.com',
-      location: 'us',
+      team: 'us',
       img: mendez,
     },
     {
@@ -154,7 +154,7 @@ const team = {
           '25 años de experiencia como ejecutivo en el sector de las ciencias de la vida en el área de Seattle (Wa). Fundador de múltiples empresas: Medtech, Tessera Diagnostics, Prevencio, Opticyte. “Entrepreneur-in-Residense”, ha sido mentor y asesorado  a otros emprendedores en la Universidad de Washington y en OHSU (Oregon Health & Science University). Licenciado en Microbiología Científica y Doctor en Biología Molecular y Celular.',
       },
       email: 'rmasterson@facultaspartners.com',
-      location: 'us',
+      team: 'us',
       img: masterson,
     },
     {
@@ -170,7 +170,7 @@ const team = {
           'Chris levantó capital de inversión para el WFnd Fondo de capital riesgo de la Universidad de Washington,  enfocado en el sector de Ciencias de la Vida. Como COO (Chief Operating Officer) llevó a cabo más de 40 inversiones en distintas compañías. Fue CEO interino de TwinStrand Bio. Actualmente, es consejero y observador en cuatro empresas del sector de ciencias de la vida. Chris es ingeniero químico y miembro del tribunal de patentes estadounidense.',
       },
       email: 'cigielski@facultaspartners.com',
-      location: 'us',
+      team: 'us',
       img: igielski,
     },
     {
@@ -181,12 +181,12 @@ const team = {
       },
       bio: {
         en:
-          'He has operated and invested across the IT and Life sciences domains for over 22 years, direct equity purchases and structured debt financing. His experience as venture capitalist and corporate development professional spans seed stage to large multinationals. MBA with specialization in corporate finance and Material science and engineering degree.',
+          'He has operated and invested across the IT and Life sciences domains for over 22 years, including direct equity purchases and structured debt financing. His experience as venture capitalist and corporate development professional spans seed stage to large multinationals. MBA from the University of Southern California, BSc in Material Science & Engineering,  Northwestern University.',
         es:
           'Ha desarrollado su carrera profesional como ejecutivo e inversor en compañías del sector de TI y Ciencias de la Vida durante más de 22 años. Realizado operaciones de adquisición con capital y deuda. Su experiencia como capitalista de riesgo y profesional de desarrollo corporativo abarca empresas desde fase semilla a grandes multinacionales. MBA con especialización en finanzas corporativas y grado en Ciencias de los Materiales e Ingeniería.',
       },
       email: 'bflucht@facultaspartners.com',
-      location: 'us',
+      team: 'us',
       img: flucht,
     },
     {
@@ -197,12 +197,12 @@ const team = {
       },
       bio: {
         en:
-          'A senior executive and entrepreneur. He has led and founded multiple companies – CardioWise, 3dMD, Vision RT in the medical imaging segment. Prior to that he led the life sciences businesses of FEI and Xradia leaders in nanotechnology imaging. As President of Nucletron Corp., formulated a groundbreaking strategy and guided the successful market introduction of Varian Medical Systems.',
+          'A senior executive and entrepreneur. He has led and founded multiple companies – CardioWise, 3dMD, Vision RT in the medical imaging segment. Prior to that he led the life sciences businesses of FEI and Xradia leaders in nanotechnology imaging. As President of Nucletron Corp., formulated a groundbreaking strategy and guided several successful market introductions at Varian Medical Systems.',
         es:
           'Ejecutivo de alta dirección y empresario. Ha fundado y dirigido múltiples empresas – CardioWise, 3dMD, Vision RT, del segmento de imagen médica. Con anterioridad dirigió varios negocios de ciencias de la vida FEI y Xradia, líder en imágenes de nanotecnología. Como Presidente de Nucletron Corp., formuló una estrategia innovadora y guió la exitosa introducción en el mercado de Varian Medical Systems.',
       },
       email: 'jcoats@facultaspartners.com',
-      location: 'us',
+      team: 'us',
       img: coats,
     },
     {
@@ -218,7 +218,7 @@ const team = {
           'Veinticinco años fundando, y liderando compañías de dispositivos médicos. Cofundó y introdujo en bolsa Geodesis Inc. (Phillips Neuro) sistemas de alta resolución EEG. Actualmente es CEO de dos empresas biomédicas: Synergic Medical Technologies Inc y CytoImage. Miembro del consejo de administración de varias empresas privadas y sin ánimo de lucro – WellRythms, Invivo Biosciences, Oregon Inc. Abogado de formación, con experiencia en litigios transaccionales y comerciales.',
       },
       email: 'abunnenberg@facultaspartners.com',
-      location: 'us',
+      team: 'us',
       img: bunnenberg,
     },
     {
@@ -234,7 +234,7 @@ const team = {
           'Emprendedor y fundador de múltiple empresas: Subvenciuris,  gestión de ayudas y subvenciones , Areka Telecom  instalaciones electromagnéticas. Cofundador de Valoralia I MAS D.  especializada en el desarrollo de líneas moleculares para Antibióticos procedentes de cianobacterias. \n Cofundador y Presidente de Canaan Research . Compañía de inversión  en salud y accionista mayoritaria en Mirnax Biosens, Isquaemia Biotech , Forchronic  y Derma Innovate. Licenciado en derecho por la UAM MBA.',
       },
       email: 'esainz@facultaspartners.com',
-      location: 'eu',
+      team: 'eu',
       img: sainzMartinez,
     },
     {
@@ -250,7 +250,7 @@ const team = {
           'Abogado de empresa. Veinte años de experiencia en el asesoramiento de empresa europeas de distinto tamaño en diferentes sectores: tecnología, energías renovables, alimentación, inmobiliario y ciencias de la vida. Cuenta con experiencia profesional en Estados Unidos y España. MBA, master en negocio internacional y financiero.',
       },
       email: 'jlcastellano@facultaspartners.com',
-      location: 'eu',
+      team: 'eu',
       img: castellanoJimenez,
     },
     {
@@ -266,7 +266,7 @@ const team = {
           'Amplia experiencia en dirección y gestión de R+D+i: más de 10 años como Responsable de Investigación en la Universidad Alfonso X el Sabio. Así como en emprendimiento: Socio fundador y consejero de Canaan Research . Venture Capital especializada en salud y promotor de Mirnax Biosens (CEO), Isquaemia Biotech , Forchronic  y Derma Innovate Doctor (PhD) en Medicina y Cirugía UAM, MBA en la UAX y  Programa Alta Dirección de Innovación en el IESE. Profesor Facultad de Medicina de la Universidad Complutense de Madrid.',
       },
       email: 'jjmontoya@facultaspartners.com',
-      location: 'eu',
+      team: 'eu',
       img: montoya,
     },
     {
@@ -282,7 +282,7 @@ const team = {
           'Ignacio cuenta con más de 30 años de experiencia en puestos de alta dirección en el sector sanitario, Palex Medical, CH Werfen Group. Ha trabajado en España, Estados Unidos e Italia. Desde el año 2000, es socio fundador de LIM Global Consulting, una firma de búsqueda ejecutiva y consultora enfocada en ciencias de la vida en toda Europa.  Español de nacimiento, con fluidez en inglés y sede en Barcelona.',
       },
       email: 'iodriozola@facultaspartners.com',
-      location: 'eu',
+      team: 'eu',
       img: odriozola,
     },
     {
@@ -298,7 +298,7 @@ const team = {
           'Más de treinta años de experiencia en el sector financiero, asegurador y ciencias de la vida. Ex Director Financiero y de Riesgos de ING Seguros. Consejero independiente de Reale Seguros de Vida. Presidente de Mirnax Biosens empresa de diagnóstico, pronóstico y control de enfermedades cardiovasculares.\n Licenciado en Ciencias Empresariales. Master en Dirección Financiera (Instituto de Empresa) y Advanced Management Programme (Insead – Fontainebleau).',
       },
       email: 'amonis@facultaspartners.com',
-      location: 'eu',
+      team: 'eu',
       img: monis,
     },
   ],
@@ -464,7 +464,7 @@ const relationships = {
       },
       text: {
         en:
-          'A leading Spanish life sciences early stage investment group. It enjoys very close working relationships with Spain leading life sciences research institutions and works to translate ground breaking and proprietary technologies into successful spin-offs.',
+          "A leading Spanish life sciences early stage investment group. It enjoys very close working relationships with Spain's leading life sciences research institutions and works to translate ground breaking and proprietary technologies into successful spin-offs.",
         es:
           'Grupo de inversión español en empresas en fase de early stage, del sector Ciencias de la Vida. Goza de relaciones muy estrechas con las principales instituciones de investigación de ciencias de la vida, y trabaja para convertir tecnologías innovadoras en spin-offs de éxito.',
       },
@@ -483,16 +483,40 @@ const contact = {
   },
   form: {
     from: {
-      en: 'email address',
-      es: 'dirección de correo electrónico',
+      en: 'Email Address',
+      es: 'Dirección de correo electrónico',
     },
-    subject: {
-      en: 'subject',
-      es: 'asunto',
+    name: {
+      en: 'Full Name',
+      es: 'Nombre completo',
     },
     message: {
-      en: 'your message',
-      es: 'su mensaje',
+      en: 'Message',
+      es: 'Mensaje',
+    },
+    send: {
+      en: 'Send',
+      es: 'Enviar',
+    },
+  },
+  thankyou: {
+    header: {
+      en: 'Thank You',
+      es: 'Gracias',
+    },
+    text: {
+      en:
+        "We've received your message and we will get back to you as soon as posible.",
+      es:
+        'Hemos recibido su mensaje y nos pondremos en contacto con usted lo antes posible.',
+    },
+    back: {
+      en: 'Back',
+      es: 'Volver',
+    },
+    again: {
+      en: 'Send Another Message',
+      es: 'Enviar Otro Mensaje',
     },
   },
 }

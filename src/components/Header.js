@@ -32,8 +32,8 @@ const TextContainer = styled.div`
     }
     h1 {
       line-height: 3rem;
-      font-weight: 300;
-      font-size: 35px;
+      font-weight: 700;
+      font-size: calc(35px + (70 - 35) * ((100vw - 300px) / (1600 - 300)));
       text-transform: uppercase;
     }
     h2 {

@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import {useLanguage} from '../context'
+import spanish from '../../assets/spanish-flag.png'
+import english from '../../assets/uk-flag.png'
 
 const Button = styled.div`
   position: relative;
@@ -9,6 +11,11 @@ const Button = styled.div`
   color: white;
   font-size: 12px;
   text-align: center;
+  img {
+    margin: 0 5px;
+    width: 20px;
+    height: 20px;
+  }
   p {
     width: 2rem;
     color: white;
@@ -21,7 +28,8 @@ const Button = styled.div`
     opacity: 0.2;
   }
   .selected {
-    background: rgb(255, 255, 255, 0.2);
+    border: 2px solid white;
+    border-radius: 50%;
   }
 `
 
@@ -34,20 +42,18 @@ function LanguageBtn() {
 
   return (
     <Button>
-      <p
+      <img
+        src={english}
         className={language === 'en' ? 'selected' : 'unselected'}
         id="en"
         onClick={() => handleSelect('en')}
-      >
-        EN
-      </p>
-      <p
+      />
+      <img
+        src={spanish}
         className={language === 'es' ? 'selected' : 'unselected'}
         id="es"
         onClick={() => handleSelect('es')}
-      >
-        ES
-      </p>
+      />
     </Button>
   )
 }
