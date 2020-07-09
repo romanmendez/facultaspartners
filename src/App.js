@@ -22,7 +22,7 @@ import {LanguageProvider} from './context'
 import BannerSection from './components/BannerSection'
 import ListSection from './components/ListSection'
 import HeaderBtn from './components/HeaderBtn'
-import ContactForm from './components/Contact'
+import ContactForm from './components/ContactForm'
 
 function App() {
   return (
@@ -60,7 +60,7 @@ function App() {
         <Element name="contact" />
         <ContactForm
           header={contact.header}
-          inputFields={contact.form}
+          form={contact.form}
           emails={team.members}
           thankyou={contact.thankyou}
         />

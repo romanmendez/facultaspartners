@@ -482,6 +482,10 @@ const contact = {
     es: 'Contacta',
   },
   form: {
+    to: {
+      en: 'Send to:',
+      es: 'Enviar a:',
+    },
     from: {
       en: 'Email Address',
       es: 'Dirección de correo electrónico',
@@ -497,6 +501,20 @@ const contact = {
     send: {
       en: 'Send',
       es: 'Enviar',
+    },
+    errorMessage: {
+      name: {
+        en: 'Please provide us with your name',
+        es: 'Indícanos tu nombre',
+      },
+      noEmail: {
+        en: 'You must enter your email address',
+        es: 'Debes indicar una dirección de correo',
+      },
+      invalidEmail: {
+        en: 'Please provide a valid email address',
+        es: 'Debes introducir un correo válido',
+      },
     },
   },
   thankyou: {
