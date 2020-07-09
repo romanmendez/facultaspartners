@@ -2,12 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 
 const HoverStyle = styled.div`
-  .list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-  }
   .list div {
     background: #90caf9;
     flex: 1;

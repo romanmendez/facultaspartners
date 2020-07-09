@@ -6,8 +6,6 @@ import ErrorStyle from '../styles/components/ErrorStyle'
 import emailjs from 'emailjs-com'
 import TextField from '@material-ui/core/TextField'
 import Select from '@material-ui/core/Select'
-import InputLabel from '@material-ui/core/InputLabel'
-import FormControl from '@material-ui/core/FormControl'
 import MenuItem from '@material-ui/core/MenuItem'
 import {useLanguage} from '../context'
 import SectionTitle from '../styles/components/SectionTitle'
@@ -20,12 +18,18 @@ const SectionContainer = styled.div`
 `
 
 const Form = styled.form`
-  padding: 40px 100px;
+  padding: 40px 50px;
   margin-left: 10px;
   margin-right: 10px;
   .input-field {
     width: 100%;
     margin-top: 10px;
+  }
+  @media (max-width: 550px) {
+    padding: 40px 20px;
+  }
+  @media (min-width: 900px) {
+    padding: 40px 100px;
   }
 `
 const ThankYou = styled.div`
