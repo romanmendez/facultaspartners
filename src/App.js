@@ -17,7 +17,7 @@ import Header from './components/Header'
 import {Element} from 'react-scroll'
 import TileSection from './components/TileSection'
 import IconSection from './components/IconSection'
-import Team from './components/TeamA'
+import Team from './components/TeamB'
 import {LanguageProvider} from './context'
 import BannerSection from './components/BannerSection'
 import ListSection from './components/ListSection'
@@ -50,7 +50,7 @@ function App() {
         />
         <TileSection header={capital.subheader} data={capital.cards} />
         <Element name="team" />
-        <Team header={team.header} members={team.members} />
+        <Team header={team.header} hover={team.hover} members={team.members} />
         <Element name="relationships" />
         <ListSection
           header={relationships.header}

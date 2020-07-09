@@ -124,6 +124,10 @@ const team = {
     en: 'The Team',
     es: 'El Equipo',
   },
+  hover: {
+    en: 'View Profile',
+    es: 'Ver Perfil',
+  },
   members: [
     {
       name: 'Miguel A. Mendez',
