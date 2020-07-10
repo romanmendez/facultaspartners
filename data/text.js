@@ -39,18 +39,18 @@ const links = [
 const header = {
   header: {
     en: 'Gain Scale And Lower Risks',
-    es: 'GANAR ESCALABILIDAD Y REDUCIR RIESGOS',
+    es: 'Crecer y reducir riesgos',
   },
   subheader: {
     en:
       'An EU - US advisory firm and provider of capital that bridges the Atlantic bringing together early stage life sciences companies to',
     es:
-      'Consultora Estadounidense y Europea,  que conecta empresas del sector Ciencias de la Vida a ambos lados del Atlántico, y pone a su disposición capital de inversión para',
+      'Empresa asesora y proveedora de capital Estadounidense y Europea,  que conecta empresas del sector Ciencias de la Vida a ambos lados del Atlántico, y pone a su disposición capital de inversión para',
   },
   button: {
     text: {
       en: 'Contact Us',
-      es: 'Contáctanos',
+      es: 'Contacto',
     },
     link: 'contact',
   },
@@ -83,7 +83,7 @@ const about = {
         en:
           'Veteran founders and C-level executives (CEO, COO) with experience across all aspects of life sciences operations.',
         es:
-          'Fundadores y ejecutivos con amplia experiencia en distintos aspectos del sector.',
+          'Fundadores y ejecutivos con amplia experiencia en distintas áreas del sector salud.',
       },
       icon: cert,
     },
@@ -101,7 +101,7 @@ const about = {
         en:
           'Experience with cross border M&A, JV, post-merger integration, negotiating deals terms over successive rounds of investment and exit.',
         es:
-          'Experiencia en fusiones y adquisiciones, joint ventures, integración de empresas, negociación y gestión de rondas de inversión y desinversión.',
+          'Experiencia en fusiones y adquisiciones, joint ventures, integración de empresas, negociación, y gestión de rondas de inversión y desinversión.',
       },
       icon: handshake,
     },
@@ -326,7 +326,7 @@ const advisory = {
     en:
       'Based upon our deep knowledge of the life sciences landscape on both sides of the Atlantic we identify companies that exhibit compelling complementarities, and work to bring them together to achieve (1+1=3). We subsequently invest in them via two separate investments funds based in the EU and the US.',
     es:
-      'Basándonos en nuestro profundo conocimiento del entorno de las ciencias de la vida a ambos lados del Atlántico, identificamos empresas que tengan potencial de complementarse y trabajamos en la unión de ambas para incrementar su valor (1+1=3). Posteriormente invertimos para potenciar sus resultados, a través de dos fondos de inversión independientes con sede en la UE y los Estados Unidos.',
+      'Basándonos en nuestro profundo conocimiento del entorno de las ciencias de la vida a ambos lados del Atlántico, identificamos empresas que tengan potencial para complementarse, y trabajamos en la vinculación de ambas para incrementar su valor (1+1=3). Posteriormente invertimos con el objetivo de potenciar sus resultados, a través de dos fondos de inversión independientes con sede Europa y Estados Unidos.',
   },
   img: {
     large: advisoryLarge,
@@ -336,7 +336,7 @@ const advisory = {
     en:
       'We build innovative companies from all sectors of life sciences, including drug development, medical devices, digital health technology & services, nutraceuticals and diagnostics with the following attributes.',
     es:
-      'Nuestro objetivo es construir empresas del sector ciencias de la vida en todos los segmentos (desarrollo de fármacos, med-tech, salud digital y nutracéuticos) con los siguientes parámetros.',
+      'Nuestro objetivo es construir empresas del sector ciencias de la vida en todos los segmentos (desarrollo de fármacos, med-tech, salud digital y nutracéuticos) con los siguientes parámetros:',
   },
   cards: [
     {

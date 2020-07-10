@@ -13,6 +13,9 @@ const Nav = styled.nav`
   position: sticky;
   top: 0;
   z-index: 100;
+  @media (max-width: 900px) {
+    justify-content: center;
+  }
 `
 
 const Logo = styled.div`
@@ -53,6 +56,7 @@ const Text = styled.span`
 
 function NavBar({logo, links}) {
   const [language] = useLanguage()
+
   const mapLinks = links.map((link, i) => (
     <Link
       key={i + link.link}

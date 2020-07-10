@@ -128,30 +128,33 @@ function Team({header, members}) {
   const handleSelection = e => {
     setTeam(e)
   }
-  const mapProfiles = members.map(p => {
-    const isTeam = p.team === team
+  const partners = members.filter(m => m.title[language].includes('Partner'))
+  const advisors = members.filter(m => m.title[language].includes('Advisor'))
+  const mapProfiles = members =>
+    members.map(p => {
+      const isTeam = p.team === team
 
-    if (isTeam)
-      return (
-        <ProfileCard
-          name={p.name}
-          title={p.title[language]}
-          bio={p.bio[language]}
-          img={p.img}
-          key={p.img}
-        />
-      )
-    if (isTeam)
-      return (
-        <ProfileCard
-          name={p.name}
-          title={p.title[language]}
-          bio={p.bio[language]}
-          img={p.img}
-          key={p.img}
-        />
-      )
-  })
+      if (isTeam)
+        return (
+          <ProfileCard
+            name={p.name}
+            title={p.title[language]}
+            bio={p.bio[language]}
+            img={p.img}
+            key={p.img}
+          />
+        )
+      if (isTeam)
+        return (
+          <ProfileCard
+            name={p.name}
+            title={p.title[language]}
+            bio={p.bio[language]}
+            img={p.img}
+            key={p.img}
+          />
+        )
+    })
 
   return (
     <SectionContainer>
@@ -164,7 +167,8 @@ function Team({header, members}) {
           Europe
         </Button>
       </ButtonsContainer>
-      <ProfilesContainer>{mapProfiles}</ProfilesContainer>
+      <ProfilesContainer>{mapProfiles(partners)}</ProfilesContainer>
+      <ProfilesContainer>{mapProfiles(advisors)}</ProfilesContainer>
     </SectionContainer>
   )
 }
