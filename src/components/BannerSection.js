@@ -62,12 +62,12 @@ const Banner = styled.div`
     color: white;
     padding: 20px 50px;
   }
-  @media (min-width: 900px) {
+  @media (min-width: 1265px) {
     &.small {
       display: none;
     }
   }
-  @media (max-width: 900px) {
+  @media (max-width: 1265px) {
     &.large {
       display: none;
     }
