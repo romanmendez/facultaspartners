@@ -15,39 +15,37 @@ import {theme} from '../styles/theme'
 
 const SectionContainer = styled.div`
   background: ${props => props.theme.lightBlue};
+  * + * {
+    margin-top: 0.5rem;
+  }
 `
 
 const Form = styled.form`
-  padding: 40px 50px;
-  margin-left: 10px;
-  margin-right: 10px;
   .input-field {
     width: 100%;
-    margin-top: 10px;
   }
   @media (max-width: 550px) {
-    padding: 40px 20px;
+    padding: 2rem 3rem;
   }
-  @media (min-width: 900px) {
-    padding: 40px 100px;
+  @media (min-width: 550px) {
+    padding: 4rem 5rem;
   }
 `
 const ThankYou = styled.div`
-  padding: 40px 100px;
+  padding: 4rem 5rem;
   .text {
     text-align: center;
   }
 `
 const ButtonContainer = styled.div`
-  margin-top: 10px;
   display: flex;
   button {
     display: flex;
     justify-content: center;
     align-items: center;
     background: ${props => props.theme.darkBlue};
-    width: 145px;
-    height: 40px;
+    width: 10rem;
+    height: 3rem;
     border-radius: 5px;
     cursor: pointer;
     font-size: 12px;

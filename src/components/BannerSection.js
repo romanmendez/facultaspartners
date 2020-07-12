@@ -12,29 +12,24 @@ const Banner = styled.div`
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
-    height: 200px;
+    height: 250px;
     background: url(${props => props.img}) no-repeat center;
-    .text {
-      width: 70%;
-    }
-    img {
-      object-fit: cover;
-      position: relative;
-      width: 100%;
-      height: 100%;
-    }
+    object-fit: cover;
     .container {
-      position: absolute;
       width: 100%;
-      bottom: 0;
-      top: 0;
-      .title {
-        width: 100%;
-      }
-      div {
+      display: flex;
+      * {
         display: flex;
+        justify-content: center;
         align-items: center;
         height: 100%;
+        width: 100%;
+        .title {
+          width: 60%;
+        }
+        .text {
+          width: 30%;
+        }
       }
     }
   }
@@ -60,14 +55,14 @@ const Banner = styled.div`
   }
   .text {
     color: white;
-    padding: 20px 50px;
+    padding: 2rem 3rem;
   }
-  @media (min-width: 900px) {
+  @media (min-width: 1265px) {
     &.small {
       display: none;
     }
   }
-  @media (max-width: 900px) {
+  @media (max-width: 1265px) {
     &.large {
       display: none;
     }
@@ -82,21 +77,17 @@ function BannerSection({header, text, img, side}) {
       <Banner img={img.large} className="large">
         {side === 'left' ? (
           <div className="container">
-            <div>
-              <SectionTitle className="title" color={theme.darkBlue}>
-                {header[language]}
-              </SectionTitle>
-              <Text className="text">{text[language]}</Text>
-            </div>
+            <SectionTitle className="title" color={theme.darkBlue}>
+              {header[language]}
+            </SectionTitle>
+            <Text className="text">{text[language]}</Text>
           </div>
         ) : (
           <div className="container">
-            <div>
-              <Text className="text">{text[language]}</Text>
-              <SectionTitle className="title" color={theme.darkBlue}>
-                {header[language]}
-              </SectionTitle>
-            </div>
+            <Text className="text">{text[language]}</Text>
+            <SectionTitle className="title" color={theme.darkBlue}>
+              {header[language]}
+            </SectionTitle>
           </div>
         )}
       </Banner>
