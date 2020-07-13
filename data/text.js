@@ -118,6 +118,7 @@ const castellanoJimenez = require('../assets/profile_imgs/castellano-jimenez.jpe
 const odriozola = require('../assets/profile_imgs/odriozola.jpg')
 const montoya = require('../assets/profile_imgs/montoya.png')
 const monis = require('../assets/profile_imgs/monis.jpg')
+const pindado = require('../assets/profile_imgs/pindado.jpg')
 
 const team = {
   header: {
@@ -304,6 +305,22 @@ const team = {
       email: 'amonis@facultaspartners.com',
       team: 'eu',
       img: monis,
+    },
+    {
+      name: 'Jesus Pindado',
+      title: {
+        en: 'Advisor',
+        es: 'Advisor',
+      },
+      bio: {
+        en:
+          'Professional trajectory in the finance and regulatory sectors. Has worked for multinational banks in compliance and regulatory matters, over 10 years at Comision Nacional Del Mercado de Valores (CNMV) the SEC equivalent, prior to that financial analyst; Principal Financial Group and Banco de Valencia. Founder and member of ASCOM, Spain’s Compliance Association. Finance degrees from Autonoma Madrid and KUB the Netherlands.',
+        es:
+          'Carrera profesional como director de compliance en entidades financieras internacionales. Más de 10 años en la Comisión Nacional del Mercado de Valores. Anteriormente analista de renta variable:  Principal Financial Group y Banco de Valencia. Fundador y miembro de la junta directiva ASCOM, Asociación Española de Compliance. Licenciado Mercados Financieros, Autónoma de Madrid, Master en Estudios Europeos, Universidad de Tilburg (KUB).',
+      },
+      email: 'jpindado@facultaspartners.com',
+      team: 'eu',
+      img: pindado,
     },
   ],
 }
