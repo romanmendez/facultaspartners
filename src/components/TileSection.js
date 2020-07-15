@@ -16,46 +16,14 @@ const TileContainer = styled.div`
   flex-flow: row wrap;
   margin-top: 50px;
   .container {
-    min-width: 350px;
+    border: 1px solid red;
+    flex-grow: 1;
     position: relative;
     text-align: center;
     background: ${props => (props.index % 2 ? props.theme.darkBlue : 'white')};
     img {
       width: 100%;
       border-radius: 5px;
-    }
-  }
-  @media (min-width: 900px) {
-    .container {
-      width: 33%;
-    }
-  }
-  @media ${device.medium} {
-    .container {
-      width: 100%;
-      img {
-        height: 100px;
-      }
-    }
-  }
-  @media (min-width: 900px) and (max-width: 1150px) {
-    #card1 {
-      order: 1;
-    }
-    #card2 {
-      order: 2;
-    }
-    #card3 {
-      order: 4;
-    }
-    #card4 {
-      order: 3;
-    }
-    #card5 {
-      order: 5;
-    }
-    #card6 {
-      order: 6;
     }
   }
 `
