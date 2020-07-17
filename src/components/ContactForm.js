@@ -12,6 +12,7 @@ import SectionTitle from '../styles/components/SectionTitle'
 import Text from '../styles/components/Text'
 import Loader from '../styles/components/Loader'
 import {theme} from '../styles/theme'
+import logoImg from '../../assets/logoblue.png'
 
 const SectionContainer = styled.div`
   background: ${props => props.theme.lightBlue};
@@ -57,6 +58,15 @@ const ButtonContainer = styled.div`
       background: #666;
       cursor: initial;
     }
+  }
+`
+const Logo = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+  img {
+    max-width: 40%;
   }
 `
 
@@ -176,6 +186,9 @@ const ContactForm = ({header, form, emails, thankyou}) => {
           </ButtonContainer>
         </Form>
       )}
+      <Logo>
+        <img src={logoImg} />
+      </Logo>
     </SectionContainer>
   )
 }
