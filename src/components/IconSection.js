@@ -2,9 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import {useLanguage} from '../context.js'
 import {device} from '../styles/theme'
-import SectionHeader from '../styles/components/SectionHeader'
-import Divider from '../styles/components/Divider'
-import Text from '../styles/components/Text'
+import SectionHeader from '../layout/SectionHeader'
+import Divider from '../layout/Divider'
+import Text from '../layout/Text'
 
 const SectionContainer = styled.div`
   margin: 50px 50px;

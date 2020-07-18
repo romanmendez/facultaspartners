@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import {useLanguage} from '../context'
-import SectionHeader from '../styles/components/SectionHeader'
-import SectionTitle from '../styles/components/SectionTitle'
+import SectionHeader from '../layout/SectionHeader'
+import SectionTitle from '../layout/SectionTitle'
 
 const SectionContainer = styled.div`
   background: ${props => props.theme.darkBlue};

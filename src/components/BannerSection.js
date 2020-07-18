@@ -2,8 +2,8 @@ import React, {useRef, useEffect, useState} from 'react'
 import styled from 'styled-components'
 import {theme} from '../styles/theme'
 import {useLanguage} from '../context'
-import SectionTitle from '../styles/components/SectionTitle'
-import Text from '../styles/components/Text'
+import SectionTitle from '../layout/SectionTitle'
+import Text from '../layout/Text'
 import {device} from '../styles/theme'
 
 const Banner = styled.div`

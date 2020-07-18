@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import {useLanguage} from '../context'
-import SectionHeader from '../styles/components/SectionHeader'
+import SectionHeader from '../layout/SectionHeader'
 import headerImage from '../../assets/header-bg.jpg'
 
 const SectionContainer = styled.div`

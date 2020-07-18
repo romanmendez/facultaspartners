@@ -1,46 +1,44 @@
 import React from 'react'
 import styled from 'styled-components'
-import SectionHeader from '../styles/components/SectionHeader'
-import Divider from '../styles/components/Divider'
-import Text from '../styles/components/Text'
+import SectionHeader from '../layout/SectionHeader'
+import Divider from '../layout/Divider'
+import Text from '../layout/Text'
 import {useLanguage} from '../context.js'
 import {device} from '../styles/theme'
 
-const SectionContainer = styled.div`
-  padding: 50px;
+const Stack = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  * + * {
+    margin-top: ${props => props.theme.scale(props.space)};
+  }
+  :only-child {
+    height: 100%;
+  }
 `
 
-const TileContainer = styled.div`
+const Box = styled.div`
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
-  margin-top: 50px;
-  .container {
-    border: 1px solid red;
-    flex-grow: 1;
-    position: relative;
-    text-align: center;
-    background: ${props => (props.index % 2 ? props.theme.darkBlue : 'white')};
-    img {
-      width: 100%;
-      border-radius: 5px;
-    }
-  }
+  padding: ${props => props.theme.scale(1)};
+  margin: ${props => props.theme.negativeScale(1)};
+  background-image: url(${props => props.img});
 `
-const TextContainer = styled.div`
-  line-height: 1rem;
+const Switcher = styled.div`
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  position: absolute;
-  top: 0;
-  font-size: 15px;
-  font-weight: 300;
-  line-height: 1.5rem;
-  height: 100%;
-  width: 100%;
-  p {
-    padding: 0 20px;
+  > * {
+    min-height: ${props => props.theme.scale(props.height) || 'auto'};
+    border-radius: ${props => props.theme.scale(props.radius)};
+    flex-grow: 1;
+    flex-basis: ${props => props.theme.scale(8)};
+    margin: ${props => props.theme.scale(1)};
+    max-width: ${props => props.theme.scale(8)};
+    overflow: hidden;
+    text-align: center;
   }
 `
 
@@ -49,20 +47,19 @@ function TileSection({header, data}) {
 
   const mapCards = data.map((card, i) => {
     return (
-      <div key={i} className="container" id={'card' + (i + 1)}>
-        <img src={card.icon} />
-        <TextContainer>
-          <Text color={card.color}>{card.text[language]}</Text>
-        </TextContainer>
-      </div>
+      <Box key={i} img={card.icon} id={'card' + (i + 1)}>
+        <Text>{card.text[language]}</Text>
+      </Box>
     )
   })
   return (
-    <SectionContainer>
+    <Stack space={1}>
       <SectionHeader>{header[language]}</SectionHeader>
       <Divider />
-      <TileContainer>{mapCards}</TileContainer>
-    </SectionContainer>
+      <Switcher height={5} radius={1}>
+        {mapCards}
+      </Switcher>
+    </Stack>
   )
 }
 
