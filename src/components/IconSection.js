@@ -1,30 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import {useLanguage} from '../context.js'
-import {device} from '../styles/theme'
-import SectionHeader from '../layout/SectionHeader'
-import Divider from '../layout/Divider'
-import Text from '../layout/Text'
-
-const SectionContainer = styled.div`
-  margin: 50px 50px;
-`
-const IconContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  div {
-    min-width: 200px;
-    max-width: 300px;
-    margin: 0 20px;
-  }
-  img {
-    margin: 20px auto;
-    display: flex;
-  }
-  @media (max-width: 1024px) {
-    flex-flow: row wrap;
-  }
-`
+import Center from '../layout/Center'
+import Stack from '../layout/Stack'
+import Switcher from '../layout/Switcher'
 
 function IconSection({header, data}) {
   const [language] = useLanguage()
@@ -32,16 +11,19 @@ function IconSection({header, data}) {
     return (
       <div key={i}>
         <img src={card.icon} />
-        <Text number={i}>{card.text[language]}</Text>
+        <p number={i}>{card.text[language]}</p>
       </div>
     )
   })
   return (
-    <SectionContainer>
-      <SectionHeader>{header[language]}</SectionHeader>
-      <Divider />
-      <IconContainer>{mapCards}</IconContainer>
-    </SectionContainer>
+    <Stack space={1}>
+      <Center>
+        <p>{header[language]}</p>
+      </Center>
+      <Switcher basis={8} margin={1} maxWidth={8}>
+        {mapCards}
+      </Switcher>
+    </Stack>
   )
 }
 

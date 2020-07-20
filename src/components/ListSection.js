@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import {useLanguage} from '../context'
-import SectionHeader from '../layout/SectionHeader'
+import Center from '../layout/Center'
 import SectionTitle from '../layout/SectionTitle'
 
 const SectionContainer = styled.div`
@@ -76,7 +76,9 @@ function ListSection({header, subheader, list}) {
   return (
     <SectionContainer>
       <SectionTitle>{header[language]}</SectionTitle>
-      <SectionHeader>{subheader[language]}</SectionHeader>
+      <Center>
+        <p>{subheader[language]}</p>
+      </Center>
       <Divider />
       <List>{mapList}</List>
     </SectionContainer>

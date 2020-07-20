@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import {useLanguage} from '../context'
-import SectionHeader from '../layout/SectionHeader'
+import Center from '../layout/Center'
 import headerImage from '../../assets/header-bg.jpg'
 
 const SectionContainer = styled.div`
@@ -51,7 +51,9 @@ function Header({header, subheader, children}) {
     <SectionContainer>
       <TextContainer>
         <div className="text">
-          <SectionHeader color="white">{subheader[language]}</SectionHeader>
+          <Center>
+            <p style={{color: 'white'}}>{subheader[language]}</p>
+          </Center>
           <h1>{header[language]}</h1>
         </div>
         <div>{children}</div>
