@@ -21,7 +21,6 @@ import Team from './components/Team'
 import {LanguageProvider} from './context'
 import BannerSection from './components/BannerSection'
 import ListSection from './components/ListSection'
-import HeaderBtn from './components/HeaderBtn'
 import ContactForm from './components/ContactForm'
 import Stack from './layout/Stack'
 
@@ -29,11 +28,14 @@ function App() {
   return (
     <LanguageProvider>
       <ThemeProvider theme={theme}>
-        <Stack space={1}>
-          <NavBar logo={menuLogo} links={links} />
-          <Header header={header.header} subheader={header.subheader}>
-            <HeaderBtn text={header.button.text} link={header.button.link} />
-          </Header>
+        <Stack space={3}>
+          <Header
+            header={header.header}
+            subheader={header.subheader}
+            logo={menuLogo}
+            links={links}
+            button={header.button}
+          ></Header>
           <Element name="about">
             <IconSection header={about.header} data={about.cards} />
           </Element>
@@ -44,8 +46,8 @@ function App() {
               text={advisory.description}
               img={advisory.img}
             />
-            <TileSection header={advisory.subheader} data={advisory.cards} />
           </Element>
+          <TileSection header={advisory.subheader} data={advisory.cards} />
           <BannerSection
             side="right"
             header={capital.header}
@@ -53,12 +55,13 @@ function App() {
             img={capital.img}
           />
           <TileSection header={capital.subheader} data={capital.cards} />
-          <Element name="team" />
-          <Team
-            header={team.header}
-            hover={team.hover}
-            members={team.members}
-          />
+          <Element name="team">
+            <Team
+              header={team.header}
+              hover={team.hover}
+              members={team.members}
+            />
+          </Element>
           <Element name="relationships">
             <ListSection
               header={relationships.header}

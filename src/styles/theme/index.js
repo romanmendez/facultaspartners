@@ -3,7 +3,7 @@ export const theme = {
   lightBlue: '#E8F1F5',
   navLinks: '#FAFAFA',
   grey: '#717272',
-  scale: unit => `${Math.pow(1.5, unit)}em`,
+  scale: unit => `${Math.pow(1.5, unit)}rem`,
 }
 
 const size = {

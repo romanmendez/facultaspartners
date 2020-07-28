@@ -1,11 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import Center from '../layout/Center'
-import Divider from '../layout/Divider'
 import Box from '../layout/Box'
-import Switcher from '../layout/Switcher'
 import Stack from '../layout/Stack'
 import {useLanguage} from '../context.js'
+import Switcher from '../layout/Switcher'
 
 const TileBox = styled(Box)`
   > * {
@@ -30,14 +29,18 @@ function TileSection({header, data}) {
     )
   })
   return (
-    <Stack space={1}>
-      <Center>
-        <p>{header[language]}</p>
-      </Center>
-      <Switcher basis={8} maxWidth={8} margin={-1}>
-        {mapCards}
-      </Switcher>
-    </Stack>
+    <Box>
+      <Stack space={3}>
+        <Center>
+          <p>{header[language]}</p>
+        </Center>
+        <Center>
+          <Switcher maxWidth={8} margin={1}>
+            {mapCards}
+          </Switcher>
+        </Center>
+      </Stack>
+    </Box>
   )
 }
 

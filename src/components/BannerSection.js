@@ -10,7 +10,7 @@ function BannerSection({header, text, img, side}) {
 
   return (
     <Stack space={0}>
-      <Box background={theme.lightBlue}>
+      <Box background={theme.lightBlue} width="100%">
         <Center>
           <h2 style={{color: `${theme.darkBlue}`}}>{header[language]}</h2>
         </Center>

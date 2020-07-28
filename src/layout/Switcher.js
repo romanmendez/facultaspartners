@@ -6,7 +6,6 @@ const Switcher = styled.div`
   justify-content: center;
   > * {
     flex-grow: 1;
-    flex-basis: ${props => props.theme.scale(props.basis)};
     margin: ${props => props.theme.scale(props.margin) || 0};
     max-width: ${props => props.theme.scale(props.maxWidth) || 'none'};
     overflow: hidden;

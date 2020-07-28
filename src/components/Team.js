@@ -6,6 +6,7 @@ import Center from '../layout/Center'
 import Switcher from '../layout/Switcher'
 import Stack from '../layout/Stack'
 import Frame from '../layout/Frame'
+import Grid from '../layout/Grid'
 
 function Team({header, members}) {
   const [language] = useLanguage()
@@ -27,15 +28,24 @@ function Team({header, members}) {
   const handleSelection = e => {
     setTeam({name: e, members: members.filter(member => member.team === e)})
   }
-  const mapMembers = team?.members.map(member => (
-    <Stack space={-2}>
-      <Frame width={4} height={3}>
-        <img src={member.img} />
-      </Frame>
-      <h3>{member.name}</h3>
-      <p>{member.title[language]}</p>
-    </Stack>
-  ))
+
+  const partners = team?.members.filter(member =>
+    member.title[language].includes('Partner'),
+  )
+  const advisors = team?.members.filter(member =>
+    member.title[language].includes('Advisor'),
+  )
+
+  const mapMembers = members =>
+    members?.map(member => (
+      <Stack space={-2} key={member.email}>
+        <Frame width={4} height={3}>
+          <img src={member.img} />
+        </Frame>
+        <h3 style={{color: `${theme.darkBlue}`}}>{member.name}</h3>
+        <p>{member.title[language]}</p>
+      </Stack>
+    ))
 
   return (
     <Box background={theme.lightBlue} width="100%">
@@ -76,9 +86,12 @@ function Team({header, members}) {
               </span>
             </Box>
           </Switcher>
-          <Switcher basis={6} margin={1}>
-            {mapMembers}
-          </Switcher>
+          <Grid min={200} gap={1}>
+            {mapMembers(partners)}
+          </Grid>
+          <Grid min={200} gap={1}>
+            {mapMembers(advisors)}
+          </Grid>
         </Stack>
       </Center>
     </Box>

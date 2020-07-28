@@ -4,6 +4,7 @@ import {useLanguage} from '../context.js'
 import Center from '../layout/Center'
 import Stack from '../layout/Stack'
 import Switcher from '../layout/Switcher'
+import Box from '../layout/Box'
 
 function IconSection({header, data}) {
   const [language] = useLanguage()
@@ -16,14 +17,16 @@ function IconSection({header, data}) {
     )
   })
   return (
-    <Stack space={1}>
-      <Center>
-        <p>{header[language]}</p>
-      </Center>
-      <Switcher basis={8} margin={1} maxWidth={8}>
-        {mapCards}
-      </Switcher>
-    </Stack>
+    <Box>
+      <Stack space={3}>
+        <Center>
+          <p>{header[language]}</p>
+        </Center>
+        <Switcher basis={8} margin={1} maxWidth={8}>
+          {mapCards}
+        </Switcher>
+      </Stack>
+    </Box>
   )
 }
 

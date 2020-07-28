@@ -1,11 +1,12 @@
 import styled from 'styled-components'
 
+const ratio = 1.5
 const Box = styled.div`
   display: flex;
   justify-content: center;
   align-content: center;
   flex-flow: row wrap;
-  width: ${props => props.width || 'content'};
+  width: ${props => `${Math.pow(ratio, props.width)}rem` || 'content'};
   padding: ${props => props.theme.scale(props.padding || 1)};
   background-image: ${props => (props.img ? `url(${props.img})` : 'none')};
   background-color: ${props => props.background || 'inherit'};
