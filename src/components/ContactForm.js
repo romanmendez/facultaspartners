@@ -8,7 +8,6 @@ import TextField from '@material-ui/core/TextField'
 import Select from '@material-ui/core/Select'
 import MenuItem from '@material-ui/core/MenuItem'
 import {useLanguage} from '../context'
-import SectionTitle from '../layout/SectionTitle'
 import Text from '../layout/Text'
 import Loader from '../layout/Loader'
 import {theme} from '../styles/theme'
@@ -96,9 +95,7 @@ const ContactForm = ({header, form, emails, thankyou}) => {
     <SectionContainer>
       {sent ? (
         <ThankYou>
-          <SectionTitle color={theme.darkBlue}>
-            {thankyou.header[language]}
-          </SectionTitle>
+          <h2 color={theme.darkBlue}>{thankyou.header[language]}</h2>
           <Text className="text">{thankyou.text[language]}</Text>
           <ButtonContainer style={{display: 'flex', justifyContent: 'center'}}>
             <button onClick={handleBack}>{thankyou.back[language]}</button>
@@ -106,7 +103,7 @@ const ContactForm = ({header, form, emails, thankyou}) => {
         </ThankYou>
       ) : (
         <Form onSubmit={handleSubmit(onSubmit)}>
-          <SectionTitle color={theme.darkBlue}>{header[language]}</SectionTitle>
+          <h2 color={theme.darkBlue}>{header[language]}</h2>
           <Controller
             as={<Select>{mapContactEmails}</Select>}
             name="to"

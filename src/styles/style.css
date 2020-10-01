@@ -35,8 +35,17 @@ h2 {
   font-weight: 700;
 }
 h1 {
-  font-size: 4rem;
+  font-size: calc(3rem + 0.5vw);
 }
 img {
   max-width: 100%;
+}
+.color\:white {
+  color: white;
+}
+.font-size\:small {
+  font-size: 0.8em;
+}
+.float\:left {
+  float: left;
 }

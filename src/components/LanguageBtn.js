@@ -13,8 +13,8 @@ const Button = styled.div`
   text-align: center;
   img {
     margin: 0 5px;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
   }
   p {
     width: 2rem;

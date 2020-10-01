@@ -11,11 +11,9 @@ import {
   capital,
   relationships,
   contact,
-} from '../data/text'
-import NavBar from './components/NavBar'
+} from '../data'
 import Header from './components/Header'
 import {Element} from 'react-scroll'
-import TileSection from './components/TileSection'
 import IconSection from './components/IconSection'
 import Team from './components/Team'
 import {LanguageProvider} from './context'
@@ -35,6 +33,7 @@ function App() {
             logo={menuLogo}
             links={links}
             button={header.button}
+            logo={header.logo}
           ></Header>
           <Element name="about">
             <IconSection header={about.header} data={about.cards} />
@@ -47,14 +46,14 @@ function App() {
               img={advisory.img}
             />
           </Element>
-          <TileSection header={advisory.subheader} data={advisory.cards} />
+          <IconSection header={advisory.subheader} data={advisory.cards} />
           <BannerSection
             side="right"
             header={capital.header}
             text={capital.description}
             img={capital.img}
           />
-          <TileSection header={capital.subheader} data={capital.cards} />
+          <IconSection header={capital.subheader} data={capital.cards} />
           <Element name="team">
             <Team
               header={team.header}
@@ -62,22 +61,22 @@ function App() {
               members={team.members}
             />
           </Element>
-          <Element name="relationships">
-            <ListSection
-              header={relationships.header}
-              subheader={relationships.subheader}
-              list={relationships.list}
-            />
-          </Element>
-          <Element name="contact">
-            <ContactForm
-              header={contact.header}
-              form={contact.form}
-              emails={team.members}
-              thankyou={contact.thankyou}
-            />
-          </Element>
         </Stack>
+        <Element name="relationships">
+          <ListSection
+            header={relationships.header}
+            subheader={relationships.subheader}
+            list={relationships.list}
+          />
+        </Element>
+        <Element name="contact">
+          <ContactForm
+            header={contact.header}
+            form={contact.form}
+            emails={team.members}
+            thankyou={contact.thankyou}
+          />
+        </Element>
       </ThemeProvider>
     </LanguageProvider>
   )

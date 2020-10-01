@@ -6,14 +6,19 @@ import Stack from '../layout/Stack'
 import Switcher from '../layout/Switcher'
 import Box from '../layout/Box'
 
+const Icon = styled.i`
+  color: ${props => props.theme.darkBlue};
+  font-size: 3rem;
+`
+
 function IconSection({header, data}) {
   const [language] = useLanguage()
   const mapCards = data.map((card, i) => {
     return (
-      <div key={i}>
-        <img src={card.icon} />
+      <Stack space={1} key={i}>
+        <Icon className="material-icons">{card.icon}</Icon>
         <p number={i}>{card.text[language]}</p>
-      </div>
+      </Stack>
     )
   })
   return (
