@@ -6,6 +6,7 @@ const Box = styled.div`
   justify-content: center;
   align-content: center;
   flex-flow: row wrap;
+  color: ${props => props.color};
   width: ${props => `${Math.pow(ratio, props.width)}rem` || 'content'};
   height: ${props => props.height};
   padding: ${props => props.theme.scale(props.padding || 1)};

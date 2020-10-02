@@ -11,15 +11,11 @@ import {useLanguage} from '../context'
 import Text from '../layout/Text'
 import Loader from '../layout/Loader'
 import {theme} from '../styles/theme'
-
-const SectionContainer = styled.div`
-  background: ${props => props.theme.lightBlue};
-  * + * {
-    margin-top: 0.5rem;
-  }
-`
+import Stack from '../layout/Stack'
+import Box from '../layout/Box'
 
 const Form = styled.form`
+  width: 100%;
   .input-field {
     width: 100%;
   }
@@ -89,89 +85,111 @@ const ContactForm = ({header, form, emails, thankyou}) => {
     </MenuItem>
   ))
 
-  console.log(formWatch, errors, mapContactEmails)
+  console.log(formWatch)
 
   return (
-    <SectionContainer>
+    <Stack>
       {sent ? (
         <ThankYou>
-          <h2 color={theme.darkBlue}>{thankyou.header[language]}</h2>
-          <Text className="text">{thankyou.text[language]}</Text>
-          <ButtonContainer style={{display: 'flex', justifyContent: 'center'}}>
-            <button onClick={handleBack}>{thankyou.back[language]}</button>
-          </ButtonContainer>
+          <Stack space={1} justify="center">
+            <h2 style={{color: `${theme.darkBlue}`, textAlign: 'center'}}>
+              {thankyou.header[language]}
+            </h2>
+            <Text className="text">{thankyou.text[language]}</Text>
+            <Box
+              background={props => props.theme.darkBlue}
+              color="white"
+              width={6}
+              radius={-1}
+              button={true}
+              onClick={handleBack}
+            >
+              {thankyou.back[language]}
+            </Box>
+          </Stack>
         </ThankYou>
       ) : (
-        <Form onSubmit={handleSubmit(onSubmit)}>
-          <h2 color={theme.darkBlue}>{header[language]}</h2>
-          <Controller
-            as={<Select>{mapContactEmails}</Select>}
-            name="to"
-            control={control}
-            variant="filled"
-            labelId="to-label"
-            value={mapContactEmails}
-            defaultValue={
-              language === 'us'
-                ? mapContactEmails[0].props.value
-                : mapContactEmails[1].props.value
-            }
-            className="input-field"
-          />
-          <Controller
-            as={TextField}
-            name="name"
-            control={control}
-            variant="filled"
-            label={form.name[language]}
-            defaultValue=""
-            className="input-field"
-            rules={{required: form.errorMessage.name[language]}}
-            error={Boolean(errors.name)}
-          />
-          <ErrorMessage errors={errors} name="name" as={<ErrorStyle />}>
-            {({messages}) => <div key={type}>{message}</div>}
-          </ErrorMessage>
-          <Controller
-            as={TextField}
-            name="email"
-            control={control}
-            variant="filled"
-            label={form.from[language]}
-            defaultValue=""
-            className="input-field"
-            rules={{
-              required: form.errorMessage.noEmail[language],
-              pattern: {
-                value: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-                message: form.errorMessage.invalidEmail[language],
-              },
-            }}
-            error={Boolean(errors.email)}
-          />
-          <ErrorMessage errors={errors} name="email" as={<ErrorStyle />}>
-            {({messages}) => <div key={type}>{message}</div>}
-          </ErrorMessage>
-          <Controller
-            as={TextField}
-            name="message"
-            control={control}
-            multiline
-            rows={5}
-            variant="filled"
-            label={form.message[language]}
-            defaultValue=""
-            className="input-field"
-          />
-          <ButtonContainer>
-            <button type="submit" disabled={loading}>
-              {form.send[language]}
-            </button>
-            {loading && <Loader color={theme.darkBlue} size="30" />}
-          </ButtonContainer>
-        </Form>
+        <Stack justify="center">
+          <Form>
+            <Stack space={1} justify="center">
+              <h2 style={{color: `${theme.darkBlue}`, textAlign: 'center'}}>
+                {header[language]}
+              </h2>
+              <Controller
+                as={<Select>{mapContactEmails}</Select>}
+                name="to"
+                control={control}
+                variant="filled"
+                labelId="to-label"
+                value={mapContactEmails}
+                defaultValue={
+                  language === 'us'
+                    ? mapContactEmails[0].props.value
+                    : mapContactEmails[1].props.value
+                }
+                className="input-field"
+              />
+              <Controller
+                as={TextField}
+                name="name"
+                control={control}
+                variant="filled"
+                label={form.name[language]}
+                defaultValue=""
+                className="input-field"
+                rules={{required: form.errorMessage.name[language]}}
+                error={Boolean(errors.name)}
+              />
+              <ErrorMessage errors={errors} name="name" as={<ErrorStyle />}>
+                {({messages}) => <div key={type}>{message}</div>}
+              </ErrorMessage>
+              <Controller
+                as={TextField}
+                name="email"
+                control={control}
+                variant="filled"
+                label={form.from[language]}
+                defaultValue=""
+                className="input-field"
+                rules={{
+                  required: form.errorMessage.noEmail[language],
+                  pattern: {
+                    value: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                    message: form.errorMessage.invalidEmail[language],
+                  },
+                }}
+                error={Boolean(errors.email)}
+              />
+              <ErrorMessage errors={errors} name="email" as={<ErrorStyle />}>
+                {({messages}) => <div key={type}>{message}</div>}
+              </ErrorMessage>
+              <Controller
+                as={TextField}
+                name="message"
+                control={control}
+                multiline
+                rows={5}
+                variant="filled"
+                label={form.message[language]}
+                defaultValue=""
+                className="input-field"
+              />
+              <Box
+                background={props => props.theme.darkBlue}
+                color="white"
+                width={6}
+                radius={-1}
+                button={true}
+                onClick={handleSubmit(onSubmit)}
+              >
+                {form.send[language]}
+              </Box>
+              {loading && <Loader color={theme.darkBlue} size="30" />}
+            </Stack>
+          </Form>
+        </Stack>
       )}
-    </SectionContainer>
+    </Stack>
   )
 }
 
