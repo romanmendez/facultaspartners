@@ -78,6 +78,7 @@ function Team({header, members}) {
       space={-2}
       key={member.email}
       onClick={() => setPopup({open: true, content: member, count: i})}
+      style={{cursor: 'pointer'}}
     >
       <Frame width={4} height={3}>
         <img src={member.img} />
