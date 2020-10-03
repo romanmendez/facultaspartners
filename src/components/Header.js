@@ -14,6 +14,7 @@ const TextLink = styled.p`
   font-size: ${props => props.theme.scale(0)};
   color: white;
   text-transform: uppercase;
+  cursor: pointer;
 `
 
 function Header({header, subheader, logo, links, button}) {
@@ -50,15 +51,11 @@ function Header({header, subheader, logo, links, button}) {
             <h1 style={{color: 'white', textAlign: 'center'}}>
               {header[language]}
             </h1>
-            <Box
-              background="white"
-              onClick={button.link}
-              width={6}
-              radius={-1}
-              button={true}
-            >
-              <p>{button.text[language]}</p>
-            </Box>
+            <Link to={button.link} smooth="true">
+              <Box background="white" width={6} radius={-1} button={true}>
+                {button.text[language]}
+              </Box>
+            </Link>
             <LanguageBtn />
           </Stack>
         </Box>
