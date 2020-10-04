@@ -1,9 +1,4 @@
-const dna = require('../../assets/dna.svg')
-const cert = require('../../assets/experience.svg')
-const link = require('../../assets/link.svg')
-const handshake = require('../../assets/agreement.svg')
-
-const about = {
+export const about = {
   header: {
     en:
       'Facultas partners is a team based in the US and Europe, with extensive experience working in the life sciences sector on both sides of the Atlantic.',
@@ -48,6 +43,4 @@ const about = {
       icon: 'thumb_up_alt',
     },
   ],
-}
-
-module.exports = about
+};
