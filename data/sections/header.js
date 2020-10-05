@@ -1,4 +1,4 @@
-const links = [
+export const links = [
   {
     text: {
       en: 'About Us',
@@ -34,10 +34,10 @@ const links = [
     },
     link: 'contact',
   },
-]
+];
 
-const logo = require('../../assets/logo-menu.png')
-const header = {
+import logo from '../../assets/logo-menu.png';
+export const header = {
   header: {
     en: 'Gain Scale And Lower Risks',
     es: 'Crecer y reducir riesgos',
@@ -56,6 +56,4 @@ const header = {
     link: 'contact',
   },
   logo: logo,
-}
-
-module.exports = {links, header}
+};

@@ -1,12 +1,12 @@
-const about = require('./sections/about')
-const {links, header} = require('./sections/header')
-const team = require('./sections/team')
-const advisory = require('./sections/advisory')
-const capital = require('./sections/capital')
-const relationships = require('./sections/relationships')
-const contact = require('./sections/contact')
+import about from './sections/about';
+import { links, header } from './sections/header';
+import team from './sections/team';
+import advisory from './sections/advisory';
+import capital from './sections/capital';
+import relationships from './sections/relationships';
+import contact from './sections/contact';
 
-module.exports = {
+export {
   links,
   header,
   about,
@@ -15,4 +15,4 @@ module.exports = {
   capital,
   relationships,
   contact,
-}
+};

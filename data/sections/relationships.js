@@ -1,4 +1,4 @@
-const canaan = require('../../assets/canaan_rd.png')
+import canaan from '../../assets/canaan_rd.png';
 
 const relationships = {
   header: {
@@ -25,10 +25,10 @@ const relationships = {
       },
       img: {
         src: canaan,
-        margin: {margin: '-10px 0 0 0'},
+        margin: { margin: '-10px 0 0 0' },
       },
     },
   ],
-}
+};
 
-module.exports = relationships
+export default relationships;

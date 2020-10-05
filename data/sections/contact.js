@@ -59,6 +59,6 @@ const contact = {
       es: 'Enviar Otro Mensaje',
     },
   },
-}
+};
 
-module.exports = contact
+export default contact;

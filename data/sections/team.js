@@ -1,15 +1,15 @@
-const mendez = require('../../assets/profile_imgs/mendez.jpg')
-const masterson = require('../../assets/profile_imgs/masterson.jpg')
-const igielski = require('../../assets/profile_imgs/igielski.jpg')
-const flucht = require('../../assets/profile_imgs/flucht.jpg')
-const coats = require('../../assets/profile_imgs/coats.jpg')
-const bunnenberg = require('../../assets/profile_imgs/bunnenberg.jpg')
-const sainzMartinez = require('../../assets/profile_imgs/sainz-martinez.jpg')
-const castellanoJimenez = require('../../assets/profile_imgs/castellano-jimenez.jpeg')
-const odriozola = require('../../assets/profile_imgs/odriozola.jpg')
-const montoya = require('../../assets/profile_imgs/montoya.png')
-const monis = require('../../assets/profile_imgs/monis.jpg')
-const pindado = require('../../assets/profile_imgs/pindado.jpg')
+import mendez from '../../assets/profile_imgs/mendez.jpg';
+import masterson from '../../assets/profile_imgs/masterson.jpg';
+import igielski from '../../assets/profile_imgs/igielski.jpg';
+import flucht from '../../assets/profile_imgs/flucht.jpg';
+import coats from '../../assets/profile_imgs/coats.jpg';
+import bunnenberg from '../../assets/profile_imgs/bunnenberg.jpg';
+import sainzMartinez from '../../assets/profile_imgs/sainz-martinez.jpg';
+import castellanoJimenez from '../../assets/profile_imgs/castellano-jimenez.jpeg';
+import odriozola from '../../assets/profile_imgs/odriozola.jpg';
+import montoya from '../../assets/profile_imgs/montoya.png';
+import monis from '../../assets/profile_imgs/monis.jpg';
+import pindado from '../../assets/profile_imgs/pindado.jpg';
 
 const team = {
   header: {
@@ -214,6 +214,6 @@ const team = {
       img: pindado,
     },
   ],
-}
+};
 
-module.exports = team
+export default team;

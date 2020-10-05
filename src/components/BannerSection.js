@@ -1,3 +1,4 @@
+import React from 'react';
 import { theme } from '../styles/theme';
 import { useLanguage } from '../context';
 import Box from '../layout/Box';
@@ -14,7 +15,7 @@ function BannerSection({ header, text, img, side }) {
           <h2 style={{ color: `${theme.darkBlue}` }}>{header[language]}</h2>
         </Center>
       </Box>
-      <Box img={img.small}>
+      <Box img={img}>
         <p style={{ color: 'white' }}>{text[language]}</p>
       </Box>
     </Stack>

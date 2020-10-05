@@ -1,4 +1,4 @@
-export const about = {
+const about = {
   header: {
     en:
       'Facultas partners is a team based in the US and Europe, with extensive experience working in the life sciences sector on both sides of the Atlantic.',
@@ -44,3 +44,5 @@ export const about = {
     },
   ],
 };
+
+export default about;

@@ -1,5 +1,4 @@
-const capitalLarge = require('../../assets/providerofcapital-bg.jpg')
-const capitalSmall = require('../../assets/provider-img.jpg')
+import capitalImg from '../../assets/provider-img.jpg';
 
 const capital = {
   header: {
@@ -12,10 +11,7 @@ const capital = {
     es:
       'Basándonos en dos fondos de inversión separados con sede en la UE y Estados Unidos, invertimos en las nuevas empresas de ciencias de la vida "fusionadas" gracias a nuestra intervención profesional.',
   },
-  img: {
-    large: capitalLarge,
-    small: capitalSmall,
-  },
+  img: capitalImg,
   subheader: {
     en: 'We are an active partner and investor',
     es: 'Nos configuramos como un inversor y socio activo.',
@@ -42,6 +38,6 @@ const capital = {
       color: 'white',
     },
   ],
-}
+};
 
-module.exports = capital
+export default capital;

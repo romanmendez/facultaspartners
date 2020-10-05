@@ -1,5 +1,4 @@
-const advisoryLarge = require('../../assets/strategigadvisory-bg.jpg')
-const advisorySmall = require('../../assets/advisory-img.jpg')
+import advisoryImg from '../../assets/advisory-img.jpg';
 
 const advisory = {
   header: {
@@ -12,10 +11,7 @@ const advisory = {
     es:
       'Basándonos en nuestro profundo conocimiento del entorno de las ciencias de la vida a ambos lados del Atlántico, identificamos empresas que tengan potencial para complementarse, y trabajamos en la vinculación de ambas para incrementar su valor (1+1=3). Posteriormente invertimos con el objetivo de potenciar sus resultados, a través de dos fondos de inversión independientes con sede Europa y Estados Unidos.',
   },
-  img: {
-    large: advisoryLarge,
-    small: advisorySmall,
-  },
+  img: advisoryImg,
   subheader: {
     en:
       'We build innovative companies from all sectors of life sciences, including drug development, medical devices, digital health technology & services, nutraceuticals and diagnostics with the following attributes.',
@@ -81,6 +77,6 @@ const advisory = {
       color: 'black',
     },
   ],
-}
+};
 
-module.exports = advisory
+export default advisory;
