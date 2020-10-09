@@ -11,7 +11,8 @@
   "plugins": ["@typescript-eslint/eslint-plugin"],
   "extends": ["eslint:recommended", "eslint-config-prettier"],
   "rules": {
-    "strict": ["error", "never"]
+    "strict": ["error", "never"],
+    "no-undef": "off"
   },
   "env": {
     "browser": true

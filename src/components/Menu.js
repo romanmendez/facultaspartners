@@ -1,73 +1,81 @@
-import React from 'react'
-import IconButton from '@material-ui/core/IconButton'
-import Menu from '@material-ui/core/Menu'
-import MenuItem from '@material-ui/core/MenuItem'
-import MoreVertIcon from '@material-ui/icons/MoreVert'
+import React from 'react';
+import styled from 'styled-components';
+import { useLanguage } from '../context';
+import { Link } from 'react-scroll';
+import Stack from '../layout/Stack';
 
-const options = [
-  'None',
-  'Atria',
-  'Callisto',
-  'Dione',
-  'Ganymede',
-  'Hangouts Call',
-  'Luna',
-  'Oberon',
-  'Phobos',
-  'Pyxis',
-  'Sedna',
-  'Titania',
-  'Triton',
-  'Umbriel',
-]
+const TextLink = styled.p`
+  font-size: ${props => props.theme.scale(0)};
+  font-weight: bold;
+  color: ${props => props.theme.darkBlue};
+  text-transform: uppercase;
+  cursor: pointer;
+`;
 
-const ITEM_HEIGHT = 48
+const shadow = '0.1rem';
+const Icon = styled.i`
+  display: flex;
+  position: absolute;
+  background: white;
+  filter: drop-shadow(${shadow} ${shadow} 0.3rem grey);
+  padding: ${props => props.theme.scale(-2)};
+  border-radius: ${props => props.theme.scale(-2)};
+  right: ${props => props.theme.scale(-1)};
+  color: ${props => props.theme.darkBlue};
+  font-size: 1.5rem;
+`;
 
-export default function LongMenu() {
-  const [anchorEl, setAnchorEl] = React.useState(null)
-  const open = Boolean(anchorEl)
+const PopUp = styled.div`
+  background: white;
+  filter: drop-shadow(${shadow} ${shadow} 0.3rem grey);
+  position: relative;
+  right: ${props => props.theme.scale(3)};
+  padding: ${props => props.theme.scale(1)} ${props => props.theme.scale(2)};
+  border-radius: ${props => props.theme.scale(-2)};
+`;
 
-  const handleClick = event => {
-    setAnchorEl(event.currentTarget)
-  }
+const Menu = styled.div`
+  position: fixed;
+  top: ${props => props.theme.scale(-1)};
+  right: ${props => props.theme.scale(-1)};
+`;
 
-  const handleClose = () => {
-    setAnchorEl(null)
-  }
+export default function BurgerMenu({ links }) {
+  const [open, setOpen] = React.useState(false);
+  const [language] = useLanguage();
+
+  const handleClick = () => {
+    setOpen(!open);
+  };
+
+  const mapLinks = links.map((link, i) => (
+    <Link
+      to={link.link}
+      smooth={true}
+      spy={true}
+      offset={-48}
+      onClick={handleClick}
+    >
+      <TextLink>{link.text[language]}</TextLink>
+    </Link>
+  ));
 
   return (
-    <div>
-      <IconButton
-        aria-label="more"
-        aria-controls="long-menu"
-        aria-haspopup="true"
-        onClick={handleClick}
-      >
-        <MoreVertIcon />
-      </IconButton>
-      <Menu
-        id="long-menu"
-        anchorEl={anchorEl}
-        keepMounted
-        open={open}
-        onClose={handleClose}
-        PaperProps={{
-          style: {
-            maxHeight: ITEM_HEIGHT * 4.5,
-            width: '20ch',
-          },
-        }}
-      >
-        {options.map(option => (
-          <MenuItem
-            key={option}
-            selected={option === 'Pyxis'}
-            onClick={handleClose}
-          >
-            {option}
-          </MenuItem>
-        ))}
-      </Menu>
-    </div>
-  )
+    <Menu>
+      {open ? (
+        <Icon className='material-icons' onClick={handleClick}>
+          close
+        </Icon>
+      ) : (
+        <Icon className='material-icons' onClick={handleClick}>
+          menu
+        </Icon>
+      )}
+      {open && (
+        <PopUp>
+          <Stack space={1}>{mapLinks}</Stack>
+        </PopUp>
+      )}
+    </Menu>
+  );
 }
