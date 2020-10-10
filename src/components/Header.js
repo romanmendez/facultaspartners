@@ -8,15 +8,13 @@ import Cover from '../layout/Cover';
 import Stack from '../layout/Stack';
 import Box from '../layout/Box';
 import Cluster from '../layout/Cluster';
-import BurgerMenu from './Menu';
 import LanguageBtn from './LanguageBtn';
 
-function Header({ header, subheader, logo, links, button }) {
+function Header({ header, subheader, logo, button }) {
   const [language] = useLanguage();
 
   return (
     <Stack space={0}>
-      <BurgerMenu links={links} />
       <Cover background={headerImage} height='70vh'>
         <Box>
           <Stack space={1} justify='center' align='center'>

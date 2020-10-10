@@ -23,6 +23,7 @@ const Icon = styled.i`
   right: ${props => props.theme.scale(-1)};
   color: ${props => props.theme.darkBlue};
   font-size: 1.5rem;
+  cursor: pointer;
 `;
 
 const PopUp = styled.div`
@@ -50,10 +51,10 @@ export default function BurgerMenu({ links }) {
 
   const mapLinks = links.map((link, i) => (
     <Link
+      key={link.text[language]}
       to={link.link}
       smooth={true}
       spy={true}
-      offset={-48}
       onClick={handleClick}
     >
       <TextLink>{link.text[language]}</TextLink>

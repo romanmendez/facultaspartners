@@ -1,7 +1,7 @@
-import React from 'react'
-import {ThemeProvider} from 'styled-components'
-import menuLogo from '../assets/logo-menu.png'
-import {theme} from './styles/theme'
+import React from 'react';
+import { ThemeProvider } from 'styled-components';
+import menuLogo from '../assets/logo-menu.png';
+import { theme } from './styles/theme';
 import {
   links,
   header,
@@ -11,16 +11,17 @@ import {
   capital,
   relationships,
   contact,
-} from '../data'
-import Header from './components/Header'
-import {Element} from 'react-scroll'
-import IconSection from './components/IconSection'
-import Team from './components/Team'
-import {LanguageProvider} from './context'
-import BannerSection from './components/BannerSection'
-import ListSection from './components/ListSection'
-import ContactForm from './components/ContactForm'
-import Stack from './layout/Stack'
+} from '../data';
+import Header from './components/Header';
+import { Element } from 'react-scroll';
+import IconSection from './components/IconSection';
+import Team from './components/Team';
+import { LanguageProvider } from './context';
+import BannerSection from './components/BannerSection';
+import ListSection from './components/ListSection';
+import ContactForm from './components/ContactForm';
+import Stack from './layout/Stack';
+import BurgerMenu from './components/Menu';
 
 function App() {
   return (
@@ -31,16 +32,14 @@ function App() {
             header={header.header}
             subheader={header.subheader}
             logo={menuLogo}
-            links={links}
             button={header.button}
-            logo={header.logo}
           ></Header>
-          <Element name="about">
+          <Element name='about'>
             <IconSection header={about.header} data={about.cards} />
           </Element>
-          <Element name="wedo">
+          <Element name='wedo'>
             <BannerSection
-              side="left"
+              side='left'
               header={advisory.header}
               text={advisory.description}
               img={advisory.img}
@@ -48,13 +47,13 @@ function App() {
           </Element>
           <IconSection header={advisory.subheader} data={advisory.cards} />
           <BannerSection
-            side="right"
+            side='right'
             header={capital.header}
             text={capital.description}
             img={capital.img}
           />
           <IconSection header={capital.subheader} data={capital.cards} />
-          <Element name="team">
+          <Element name='team'>
             <Team
               header={team.header}
               hover={team.hover}
@@ -62,14 +61,14 @@ function App() {
             />
           </Element>
         </Stack>
-        <Element name="relationships">
+        <Element name='relationships'>
           <ListSection
             header={relationships.header}
             subheader={relationships.subheader}
             list={relationships.list}
           />
         </Element>
-        <Element name="contact">
+        <Element name='contact'>
           <ContactForm
             header={contact.header}
             form={contact.form}
@@ -77,9 +76,10 @@ function App() {
             thankyou={contact.thankyou}
           />
         </Element>
+        <BurgerMenu links={links} />
       </ThemeProvider>
     </LanguageProvider>
-  )
+  );
 }
 
-export default App
+export default App;
