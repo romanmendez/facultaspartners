@@ -35,6 +35,7 @@ const Logo = styled.div`
   padding-bottom: ${props => props.theme.scale(1)};
   img {
     width: 70%;
+    height: 70%;
     max-width: 30rem;
   }
 `;

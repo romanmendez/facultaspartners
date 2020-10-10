@@ -7,6 +7,7 @@ import { theme } from '../styles/theme';
 import Cover from '../layout/Cover';
 import Stack from '../layout/Stack';
 import Box from '../layout/Box';
+import Frame from '../layout/Frame';
 import Cluster from '../layout/Cluster';
 import LanguageBtn from './LanguageBtn';
 
@@ -18,9 +19,7 @@ function Header({ header, subheader, logo, button }) {
       <Cover background={headerImage} height='70vh'>
         <Box>
           <Stack space={1} justify='center' align='center'>
-            <Box width={8}>
-              <img width='100%' src={logo} />
-            </Box>
+            <img alt='Facultas Partners logo' src={logo} />
             <p style={{ color: 'white', textAlign: 'center' }}>
               {subheader[language]}
             </p>
