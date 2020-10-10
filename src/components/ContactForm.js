@@ -21,7 +21,7 @@ const Form = styled.form`
     width: 100%;
   }
 `;
-const ThankYou = styled.div`
+const Submitted = styled.div`
   padding: 4rem 5rem;
   .text {
     text-align: center;
@@ -75,7 +75,7 @@ const ContactForm = ({ header, form, emails, thankyou }) => {
     <Box space={1} padding={2}>
       <Stack space={1}>
         {sent ? (
-          <ThankYou>
+          <Submitted>
             <Stack space={1} justify='center'>
               <h2 style={{ color: `${theme.darkBlue}`, textAlign: 'center' }}>
                 {thankyou.header[language]}
@@ -92,7 +92,26 @@ const ContactForm = ({ header, form, emails, thankyou }) => {
                 {thankyou.back[language]}
               </Box>
             </Stack>
-          </ThankYou>
+          </Submitted>
+        ) : error ? (
+          <Submitted>
+            <Stack space={1} justify='center'>
+              <h2 style={{ color: `${theme.darkBlue}`, textAlign: 'center' }}>
+                {error}
+              </h2>
+              <Text className='text'>{thankyou.text[language]}</Text>
+              <Box
+                background={props => props.theme.darkBlue}
+                color='white'
+                width={6}
+                radius={-1}
+                button={true}
+                onClick={handleBack}
+              >
+                {thankyou.back[language]}
+              </Box>
+            </Stack>
+          </Submitted>
         ) : (
           <Stack justify='center'>
             <Form>
@@ -139,7 +158,7 @@ const ContactForm = ({ header, form, emails, thankyou }) => {
                   rules={{
                     required: form.errorMessage.noEmail[language],
                     pattern: {
-                      value: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                      value: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
                       message: form.errorMessage.invalidEmail[language],
                     },
                   }}

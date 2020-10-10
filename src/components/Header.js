@@ -1,14 +1,10 @@
 import React from 'react';
 import { useLanguage } from '../context';
-import styled from 'styled-components';
 import headerImage from '../../assets/header-bg.jpg';
 import { Link } from 'react-scroll';
-import { theme } from '../styles/theme';
 import Cover from '../layout/Cover';
 import Stack from '../layout/Stack';
 import Box from '../layout/Box';
-import Frame from '../layout/Frame';
-import Cluster from '../layout/Cluster';
 import LanguageBtn from './LanguageBtn';
 
 function Header({ header, subheader, logo, button }) {

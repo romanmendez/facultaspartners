@@ -138,7 +138,10 @@ function Team({ header, members }) {
               <PopupGrid side='left' space={1}>
                 <div>
                   <Frame width={4} height={3}>
-                    <img src={popup.content.img} />
+                    <img
+                      alt={`head shot of ${popup.content.name}`}
+                      src={popup.content.img}
+                    />
                   </Frame>
                 </div>
                 <div>
