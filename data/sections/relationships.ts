@@ -25,7 +25,7 @@ const relationships = {
       },
       img: {
         src: canaan,
-        style: { margin: '-10px 0 0 0', height: '100%', width: '100%' },
+        style: { margin: '-10px 0 0 0' },
       },
     },
   ],

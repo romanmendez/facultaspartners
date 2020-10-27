@@ -5,6 +5,7 @@ import { useLanguage } from '../context';
 import Center from '../layout/Center';
 import Stack from '../layout/Stack';
 import Box from '../layout/Box';
+import Frame from '../layout/Frame';
 
 const Grid = styled.div`
   display: grid;
@@ -25,13 +26,15 @@ function ListSection({ header, subheader, list }) {
   const [language] = useLanguage();
   const mapList = list.map((item, i) => (
     <Grid key={i + header}>
-      <ImageContainer>
-        <img
-          alt={`${item.header[language]} logo`}
-          src={item.img.src}
-          style={item.img.style}
-        />
-      </ImageContainer>
+      <div>
+        <Frame width={4} height={3} background='white'>
+          <img
+            alt={`${item.header[language]} logo`}
+            src={item.img.src}
+            style={item.img.style}
+          />
+        </Frame>
+      </div>
       <div className='text'>
         <h3 className='color:white'>{item.header[language]}</h3>
         <p className='color:white font-size:small'>{item.text[language]}</p>

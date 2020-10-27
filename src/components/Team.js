@@ -25,7 +25,6 @@ const PopupWindow = styled.div`
 const PopupGrid = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: ${props => props.theme.scale(1)};
   > * {
     flex-grow: 1;
     flex-basis: calc((45rem - 100%) * 999);
@@ -144,7 +143,7 @@ function Team({ header, members }) {
                     />
                   </Frame>
                 </div>
-                <div>
+                <div style={{ marginLeft: '1.5rem' }}>
                   <h3 style={{ color: `${theme.darkBlue}` }}>
                     {popup.content.name}
                   </h3>

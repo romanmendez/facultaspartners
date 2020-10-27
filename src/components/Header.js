@@ -15,7 +15,11 @@ function Header({ header, subheader, logo, button }) {
       <Cover background={headerImage} height='70vh'>
         <Box>
           <Stack space={1} justify='center' align='center'>
-            <img alt='Facultas Partners logo' src={logo} />
+            <img
+              alt='Facultas Partners logo'
+              src={logo}
+              style={{ maxWidth: '50%' }}
+            />
             <p style={{ color: 'white', textAlign: 'center' }}>
               {subheader[language]}
             </p>
