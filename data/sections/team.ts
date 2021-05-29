@@ -10,6 +10,7 @@ import odriozola from '../../assets/profile_imgs/odriozola.jpg';
 import montoya from '../../assets/profile_imgs/montoya.png';
 import monis from '../../assets/profile_imgs/monis.jpg';
 import pindado from '../../assets/profile_imgs/pindado.jpg';
+import byron from '../../assets/profile_imgs/byron.jpeg';
 
 const team = {
   header: {
@@ -166,6 +167,22 @@ const team = {
       img: montoya,
     },
     {
+      name: 'Ron Byron',
+      title: {
+        en: 'Partner',
+        es: 'Partner',
+      },
+      bio: {
+        en:
+          'Ron is based in the Netherlands and has extensive experience in the Medical Technology and Bio-Pharmaceuticals industry in the areas of Sales & Marketing and operational management having held management roles of affiliates and distributor organizations throughout EMEA,  and the US. MBA from Glasgow University, MSc in Strategy & Organization (Open University), and a PhD from the Faculty of Management Sciences and Technology of the Open University, The Netherlands.',
+        es:
+          'Ron se encuentra en los paises bajos y tiene extensa experiencia en la industria de la tecnología para uso medicinal y bio-farmaceuticas en el area de marketing, ventas y management operacional, habiendo trabajado en puestos de management para afilidos y organizaciones distribuidoras dentro de la EMEA y de EEUU. MBA de Glasgow University, MSc en Strategy & Organization (Open University) y doctorado de la facultad de Management Sciences and Technology of the Open University, The Netherlands.',
+      },
+      email: 'rbyron@facultaspartners.com',
+      team: 'eu',
+      img: byron,
+    },
+    {
       name: 'Ignacio Odriozola',
       title: {
         en: 'Advisor',
@@ -180,22 +197,6 @@ const team = {
       email: 'iodriozola@facultaspartners.com',
       team: 'eu',
       img: odriozola,
-    },
-    {
-      name: 'Antonio Monis',
-      title: {
-        en: 'Advisor',
-        es: 'Advisor',
-      },
-      bio: {
-        en:
-          'Antonio has over 30 years’ experience in the finance and insurance sectors, as well as in life sciences at most senior level. CFO of ING Insurance Company, independent director of Reale Seguros de Vida (Reale Group). Chairman of the board of Mirnax Biosens a diagnostic company. MBA and Advanced Management Program at INSEAD.',
-        es:
-          'Más de treinta años de experiencia en el sector financiero, asegurador y ciencias de la vida. Ex Director Financiero y de Riesgos de ING Seguros. Consejero independiente de Reale Seguros de Vida. Presidente de Mirnax Biosens empresa de diagnóstico, pronóstico y control de enfermedades cardiovasculares.\n Licenciado en Ciencias Empresariales. Master en Dirección Financiera (Instituto de Empresa) y Advanced Management Programme (Insead – Fontainebleau).',
-      },
-      email: 'amonis@facultaspartners.com',
-      team: 'eu',
-      img: monis,
     },
     {
       name: 'Jesus Pindado',
