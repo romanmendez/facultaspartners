@@ -176,7 +176,7 @@ const team = {
         en:
           'Ron is based in the Netherlands and has extensive experience in the Medical Technology and Bio-Pharmaceuticals industry in the areas of Sales & Marketing and operational management having held management roles of affiliates and distributor organizations throughout EMEA,  and the US. MBA from Glasgow University, MSc in Strategy & Organization (Open University), and a PhD from the Faculty of Management Sciences and Technology of the Open University, The Netherlands.',
         es:
-          'Ron se encuentra en los paises bajos y tiene extensa experiencia en la industria de la tecnología para uso medicinal y bio-farmaceuticas en el area de marketing, ventas y management operacional, habiendo trabajado en puestos de management para afilidos y organizaciones distribuidoras dentro de la EMEA y de EEUU. MBA de Glasgow University, MSc en Strategy & Organization (Open University) y doctorado de la facultad de Management Sciences and Technology of the Open University, The Netherlands.',
+          'Ron reside en Paises Bajos y cuenta con una amplia experiencia en tecnología sanitaria (medtech) y la industria bio-farmacéutica. Ha desarrollado su carrera en las áreas de marketing y management operacional, desempeñando puestos de responsabilidad en empresas distribuidoras dentro de la EMEA y de EEUU. Titulado MBA por Glasgow University, MSc en Estrategia  y Organización (Open University) y doctorado por la facultad de Management Sciences and Technology of the Open University, en The Netherlands.',
       },
       email: 'rbyron@facultaspartners.com',
       team: 'eu',
