@@ -103,22 +103,6 @@ const team = {
       img: coats,
     },
     {
-      name: 'Ann Bunnenberg',
-      title: {
-        en: 'Advisor',
-        es: 'Advisor',
-      },
-      bio: {
-        en:
-          'Twenty-five years founding, leading and exiting medical device companies. Co-founded and took public Geodesis Inc. (now Phillips Neuro) high resolution EEG systems. Currently CEO of two biomedical companies- Synergic Medical Technologies Inc and CytoImage. Board member of various private and not for profit companies – WellRythms, Invivo Biosciences, Oregon Inc. A lawyer by training with experience in transactional and commercial litigation.',
-        es:
-          'Veinticinco años fundando, y liderando compañías de dispositivos médicos. Cofundó y introdujo en bolsa Geodesis Inc. (Phillips Neuro) sistemas de alta resolución EEG. Actualmente es CEO de dos empresas biomédicas: Synergic Medical Technologies Inc y CytoImage. Miembro del consejo de administración de varias empresas privadas y sin ánimo de lucro – WellRythms, Invivo Biosciences, Oregon Inc. Abogado de formación, con experiencia en litigios transaccionales y comerciales.',
-      },
-      email: 'abunnenberg@facultaspartners.com',
-      team: 'us',
-      img: bunnenberg,
-    },
-    {
       name: 'Enrique Sainz Martinez',
       title: {
         en: 'Partner',
