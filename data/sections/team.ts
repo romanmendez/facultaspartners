@@ -1,6 +1,6 @@
 import mendez from '../../assets/profile_imgs/mendez.jpg';
 import masterson from '../../assets/profile_imgs/masterson.jpg';
-import igielski from '../../assets/profile_imgs/igielski.jpg';
+import rampy from '../../assets/profile_imgs/rampy.png';
 import flucht from '../../assets/profile_imgs/flucht.jpg';
 import coats from '../../assets/profile_imgs/coats.jpg';
 import bunnenberg from '../../assets/profile_imgs/bunnenberg.jpg';
@@ -55,20 +55,20 @@ const team = {
       img: masterson,
     },
     {
-      name: 'Chris Igielski',
+      name: 'Mark Rampy',
       title: {
         en: 'Partner',
         es: 'Partner',
       },
       bio: {
         en:
-          'Chris raised capital for the WFund an early stage venture fund with a life sciences focus. As its Chief Operating Officer, he negotiated more than 40 company investments. He served as interim CEO of TwinStrand Bio. He currently serves as board member or observer on four life sciences companies. Chris is a member of the US patent bar, but in addition holds a degree in chemical engineering.',
+          'Over 25 years of experience as an executive, entrepreneur, advisor and investor in the life sciences sector including leadership roles at early-stage through public companies. Extensive expertise as a corporate/business development professional. Founder of biotech companies, CoGenesys and Tailored Therapeutics. MBA from Georgetown University, Ph.D. in Pharmacology from University of Michigan.',
         es:
-          'Chris levantó capital de inversión para el WFnd Fondo de capital riesgo de la Universidad de Washington,  enfocado en el sector de Ciencias de la Vida. Como COO (Chief Operating Officer) llevó a cabo más de 40 inversiones en distintas compañías. Fue CEO interino de TwinStrand Bio. Actualmente, es consejero y observador en cuatro empresas del sector de ciencias de la vida. Chris es ingeniero químico y miembro del tribunal de patentes estadounidense.',
+          'Over 25 years of experience as an executive, entrepreneur, advisor and investor in the life sciences sector including leadership roles at early-stage through public companies. Extensive expertise as a corporate/business development professional. Founder of biotech companies, CoGenesys and Tailored Therapeutics. MBA from Georgetown University, Ph.D. in Pharmacology from University of Michigan.',
       },
-      email: 'cigielski@facultaspartners.com',
+      email: 'mrampy@facultaspartners.com',
       team: 'us',
-      img: igielski,
+      img: rampy,
     },
     {
       name: 'Brian Flucht',
@@ -101,22 +101,6 @@ const team = {
       email: 'jcoats@facultaspartners.com',
       team: 'us',
       img: coats,
-    },
-    {
-      name: 'Ann Bunnenberg',
-      title: {
-        en: 'Advisor',
-        es: 'Advisor',
-      },
-      bio: {
-        en:
-          'Twenty-five years founding, leading and exiting medical device companies. Co-founded and took public Geodesis Inc. (now Phillips Neuro) high resolution EEG systems. Currently CEO of two biomedical companies- Synergic Medical Technologies Inc and CytoImage. Board member of various private and not for profit companies – WellRythms, Invivo Biosciences, Oregon Inc. A lawyer by training with experience in transactional and commercial litigation.',
-        es:
-          'Veinticinco años fundando, y liderando compañías de dispositivos médicos. Cofundó y introdujo en bolsa Geodesis Inc. (Phillips Neuro) sistemas de alta resolución EEG. Actualmente es CEO de dos empresas biomédicas: Synergic Medical Technologies Inc y CytoImage. Miembro del consejo de administración de varias empresas privadas y sin ánimo de lucro – WellRythms, Invivo Biosciences, Oregon Inc. Abogado de formación, con experiencia en litigios transaccionales y comerciales.',
-      },
-      email: 'abunnenberg@facultaspartners.com',
-      team: 'us',
-      img: bunnenberg,
     },
     {
       name: 'Enrique Sainz Martinez',
