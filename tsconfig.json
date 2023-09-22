@@ -1,7 +1,0 @@
-{
-  "compilerOptions": {
-    "noEmit": true,
-    "baseUrl": "./src",
-    "typeRoots": ["./node_modules/@types", "./custom_typing"]
-  }
-}
