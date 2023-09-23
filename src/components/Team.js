@@ -86,45 +86,33 @@ function Team({ header, members }) {
     </Stack>
   ));
 
+  const continentToggle = region => (
+    <Box
+      background={team?.name === region ? theme.darkBlue : 'none'}
+      onClick={() => handleSelection(region)}
+      borderWidth={-5}
+      borderColor={theme.darkBlue}
+      radius={-1}
+      padding={-1}
+      button={true}
+    >
+      <span
+        style={{
+          color: `${team?.name === region ? 'white' : theme.darkBlue}`,
+        }}
+      >
+        {region === 'us' ? 'USA' : 'Europe'}
+      </span>
+    </Box>
+  );
+
   return (
     <Box background={theme.lightBlue} width='100%'>
       <Stack space={1} justify='center'>
         <h2 style={{ color: `${theme.darkBlue}` }}>{header[language]}</h2>
         <Cluster gap={-1} justify='center'>
-          <Box
-            background={team?.name === 'us' ? theme.darkBlue : 'none'}
-            onClick={() => handleSelection('us')}
-            borderWidth={-5}
-            borderColor={theme.darkBlue}
-            radius={-1}
-            padding={-1}
-            button={true}
-          >
-            <span
-              style={{
-                color: `${team?.name === 'us' ? 'white' : theme.darkBlue}`,
-              }}
-            >
-              USA
-            </span>
-          </Box>
-          <Box
-            background={team?.name === 'eu' ? theme.darkBlue : 'none'}
-            onClick={() => handleSelection('eu')}
-            borderWidth={-5}
-            borderColor={theme.darkBlue}
-            radius={-1}
-            padding={-1}
-            button={true}
-          >
-            <span
-              style={{
-                color: `${team?.name === 'eu' ? 'white' : theme.darkBlue}`,
-              }}
-            >
-              Europe
-            </span>
-          </Box>
+          {continentToggle('us')}
+          {continentToggle('eu')}
         </Cluster>
         <Box width='100%' padding={0}>
           <Grid gap={1}>{mapMembers}</Grid>
