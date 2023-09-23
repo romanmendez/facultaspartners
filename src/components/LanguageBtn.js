@@ -1,8 +1,8 @@
-import React from 'react'
-import styled from 'styled-components'
-import {useLanguage} from '../context'
-import spanish from '../../assets/spanish-flag.png'
-import english from '../../assets/uk-flag.png'
+import React from 'react';
+import styled from 'styled-components';
+import { useLanguage } from '../context';
+import spanish from '../../assets/spanish-flag.png';
+import english from '../../assets/usa-flag.png';
 
 const Button = styled.div`
   position: relative;
@@ -31,31 +31,31 @@ const Button = styled.div`
     border: 2px solid white;
     border-radius: 50%;
   }
-`
+`;
 
 function LanguageBtn() {
-  const [language, setLanguage] = useLanguage()
+  const [language, setLanguage] = useLanguage();
   const handleSelect = selection => {
-    setLanguage(selection)
-    localStorage.setItem('language', JSON.stringify(selection))
-  }
+    setLanguage(selection);
+    localStorage.setItem('language', JSON.stringify(selection));
+  };
 
   return (
     <Button>
       <img
         src={english}
         className={language === 'en' ? 'selected' : 'unselected'}
-        id="en"
+        id='en'
         onClick={() => handleSelect('en')}
       />
       <img
         src={spanish}
         className={language === 'es' ? 'selected' : 'unselected'}
-        id="es"
+        id='es'
         onClick={() => handleSelect('es')}
       />
     </Button>
-  )
+  );
 }
 
-export default LanguageBtn
+export default LanguageBtn;
