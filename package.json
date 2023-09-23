@@ -7,14 +7,7 @@
   "scripts": {
     "start": "parcel index.html",
     "test": "jest --watch",
-    "build": "parcel build index.html",
-    "deploy": "npm run build && scp -i ~/.ssh/digital_ocean -r ./dist/* romanmendez@46.101.171.98:/var/www/facultaspartners.com/html",
-    "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx .",
-    "check-types": "tsc",
-    "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json|ts|tsx)\"",
-    "format": "npm run prettier -- --write",
-    "check-format": "npm run prettier -- --check",
-    "validate": "npm-run-all --parallel check-types check-format lint build"
+    "build": "parcel build index.html"
   },
   "lint-staged": {
     "**/*.+(js|json|css|html|md)": [
