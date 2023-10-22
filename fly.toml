@@ -1,0 +1,9 @@
+# fly.toml app configuration file generated for facultas-partners on 2023-10-21T21:50:22+02:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "facultas-partners"
+primary_region = "mad"
+
+[build]
