@@ -1,45 +1,49 @@
-# syntax = docker/dockerfile:1
+# base node image
+FROM node:18-bullseye-slim as base
 
-# Adjust NODE_VERSION as desired
-ARG NODE_VERSION=20.7.0
-FROM node:${NODE_VERSION}-slim as base
+# install all node_modules, including dev
+FROM base as deps
 
-LABEL fly_launch_runtime="Node.js"
+RUN mkdir /app/
+WORKDIR /app/
 
-# Node.js app lives here
-WORKDIR /app
+ADD package.json package-lock.json ./
+RUN npm install
 
-# Set production environment
-ENV NODE_ENV="production"
+# setup production node_modules
+FROM base as production-deps
 
+RUN mkdir /app/
+WORKDIR /app/
 
-# Throw-away build stage to reduce size of final image
-FROM base as build
-
-# Install packages needed to build node modules
-RUN apt-get update -qq && \
-    apt-get install -y build-essential pkg-config python-is-python3
-
-# Install node modules
-COPY --link package-lock.json package.json ./
-RUN npm ci --include=dev
-
-# Copy application code
-COPY --link . .
-
-# Build application
-RUN npm run build
-
-# Remove development dependencies
+COPY --from=deps /app/node_modules /app/node_modules
+ADD package.json package-lock.json ./
 RUN npm prune --omit=dev
 
+# build app
+FROM base as build
 
-# Final stage for app image
+RUN mkdir /app/
+WORKDIR /app/
+
+COPY --from=deps /app/node_modules /app/node_modules
+
+# app code changes all the time
+ADD . .
+RUN npm run build
+
+# build smaller image for running
 FROM base
 
-# Copy built application
-COPY --from=build app/dist /app
+ENV PORT="8080"
+ENV NODE_ENV="production"
 
-# Start the server by default, this can be overwritten at runtime
-EXPOSE 3000
-CMD [ "npm", "run", "start" ]
+RUN mkdir /app/
+WORKDIR /app/
+
+COPY --from=production-deps /app/node_modules /app/node_modules
+COPY --from=build /app/dist /app/dist
+
+ADD . .
+
+CMD ["npm", "start"]
