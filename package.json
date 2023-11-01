@@ -5,10 +5,10 @@
   "author": "Román Méndez Beck",
   "license": "ISC",
   "scripts": {
-    "start": "parcel index.html",
+    "start": "parcel serve index.html",
     "test": "jest --watch",
     "build": "parcel build index.html",
-    "build:prod": "NODE_ENV=production parcel build index.html"
+    "start:prod": "parcel serve --no-hmr index.html"
   },
   "lint-staged": {
     "**/*.+(js|json|css|html|md)": [

@@ -46,4 +46,4 @@ COPY --from=build /app/dist /app/dist
 
 ADD . .
 
-CMD ["npm", "start"]
+CMD ["npm", "run", "start:prod"]
