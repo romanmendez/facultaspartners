@@ -40,7 +40,7 @@ const Logo = styled.div`
   }
 `;
 
-const ContactForm = ({ header, form, emails, thankyou }) => {
+const ContactForm = ({ header, form, contacts, thankyou }) => {
   const [language] = useLanguage();
   const [sent, setSent] = useState(false);
   const [error, setError] = useState(false);
@@ -61,13 +61,9 @@ const ContactForm = ({ header, form, emails, thankyou }) => {
       });
   };
 
-  const handleBack = e => setSent(false);
-  const filterEmails = emails.filter(
-    e => e.email.includes('mendez') || e.email.includes('sainz')
-  );
-  const mapContactEmails = filterEmails.map(e => (
-    <MenuItem key={e.email} value={e.email}>
-      {`${e.name} (${e.team.toUpperCase()} Team)`}
+  const mapContactEmails = contacts.map(contact => (
+    <MenuItem key={contact.email} value={contact.email}>
+      {`${contact.name} (${contact.team.toUpperCase()} Team)`}
     </MenuItem>
   ));
 
@@ -158,7 +154,8 @@ const ContactForm = ({ header, form, emails, thankyou }) => {
                   rules={{
                     required: form.errorMessage.noEmail[language],
                     pattern: {
-                      value: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                      value:
+                        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
                       message: form.errorMessage.invalidEmail[language],
                     },
                   }}

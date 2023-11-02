@@ -6,7 +6,6 @@ import {
   links,
   header,
   about,
-  team,
   advisory,
   capital,
   relationships,
@@ -48,11 +47,6 @@ function App() {
             img={capital.img}
           />
           <IconSection header={capital.subheader} data={capital.cards} />
-          <Team
-            header={team.header}
-            hover={team.hover}
-            members={team.members}
-          />
         </Stack>
         <ListSection
           header={relationships.header}
@@ -62,7 +56,18 @@ function App() {
         <ContactForm
           header={contact.header}
           form={contact.form}
-          emails={team.members}
+          contacts={[
+            {
+              name: 'Miguel A. Mendez',
+              email: 'mmendez@facultaspartners.com',
+              team: 'us',
+            },
+            {
+              name: 'Enrique Sainz Martinez',
+              email: 'esainz@facultaspartners.com',
+              team: 'eu',
+            },
+          ]}
           thankyou={contact.thankyou}
         />
       </ThemeProvider>
