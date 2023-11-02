@@ -13,7 +13,6 @@ import {
   contact,
 } from '../data';
 import Header from './components/Header';
-import { Element } from 'react-scroll';
 import IconSection from './components/IconSection';
 import Team from './components/Team';
 import { LanguageProvider } from './context';
@@ -34,17 +33,13 @@ function App() {
             logo={menuLogo}
             button={header.button}
           ></Header>
-          <Element name='about'>
-            <IconSection header={about.header} data={about.cards} />
-          </Element>
-          <Element name='wedo'>
-            <BannerSection
-              side='left'
-              header={advisory.header}
-              text={advisory.description}
-              img={advisory.img}
-            />
-          </Element>
+          <IconSection header={about.header} data={about.cards} />
+          <BannerSection
+            side='left'
+            header={advisory.header}
+            text={advisory.description}
+            img={advisory.img}
+          />
           <IconSection header={advisory.subheader} data={advisory.cards} />
           <BannerSection
             side='right'
@@ -53,30 +48,23 @@ function App() {
             img={capital.img}
           />
           <IconSection header={capital.subheader} data={capital.cards} />
-          <Element name='team'>
-            <Team
-              header={team.header}
-              hover={team.hover}
-              members={team.members}
-            />
-          </Element>
+          <Team
+            header={team.header}
+            hover={team.hover}
+            members={team.members}
+          />
         </Stack>
-        <Element name='relationships'>
-          <ListSection
-            header={relationships.header}
-            subheader={relationships.subheader}
-            list={relationships.list}
-          />
-        </Element>
-        <Element name='contact'>
-          <ContactForm
-            header={contact.header}
-            form={contact.form}
-            emails={team.members}
-            thankyou={contact.thankyou}
-          />
-        </Element>
-        <BurgerMenu links={links} />
+        <ListSection
+          header={relationships.header}
+          subheader={relationships.subheader}
+          list={relationships.list}
+        />
+        <ContactForm
+          header={contact.header}
+          form={contact.form}
+          emails={team.members}
+          thankyou={contact.thankyou}
+        />
       </ThemeProvider>
     </LanguageProvider>
   );

@@ -5,7 +5,7 @@
   "author": "Román Méndez Beck",
   "license": "ISC",
   "scripts": {
-    "start": "parcel serve index.html",
+    "start": "parcel index.html",
     "test": "jest --watch",
     "build": "parcel build index.html",
     "start:prod": "parcel serve --no-hmr index.html"
