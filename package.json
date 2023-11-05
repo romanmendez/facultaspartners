@@ -5,10 +5,10 @@
   "author": "Román Méndez Beck",
   "license": "ISC",
   "scripts": {
-    "start": "parcel serve index.html",
+    "start": "serve -s dist -l 8080",
+    "dev": "parcel serve index.html",
     "test": "jest --watch",
-    "build": "parcel build index.html",
-    "start:prod": "parcel serve --no-hmr index.html"
+    "build": "parcel build index.html"
   },
   "lint-staged": {
     "**/*.+(js|json|css|html|md)": [
@@ -19,12 +19,13 @@
     "@hookform/error-message": "0.0.2",
     "@material-ui/core": "^4.11.0",
     "emailjs-com": "^2.4.1",
+    "parcel": "^2.9.3",
+    "process": "^0.11.10",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-hook-form": "^6.0.1",
     "react-scroll": "^1.7.16",
-    "parcel": "^2.9.3",
-    "process": "^0.11.10",
+    "serve": "^14.2.1",
     "styled-components": "^5.1.1"
   },
   "devDependencies": {
